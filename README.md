@@ -21,12 +21,5 @@ Currently interning at **Nirikshan AI** (GenAI / CV / ML startup), working throu
 
 ---
 
-### Stats
-
-![Stats](https://github-readme-stats.vercel.app/api?username=RugvedBane&theme=dark&hide_border=true&count_private=false)
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=RugvedBane&theme=dark&hide_border=true&layout=compact)
-
----
-
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:rugvedbane76@gmail.com)
 [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white)](https://www.kaggle.com/rugvedbane)
