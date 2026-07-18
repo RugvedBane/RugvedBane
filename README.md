@@ -1,8 +1,20 @@
+![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=58A6FF&width=500&lines=AI+Engineer+Intern;ML+Practitioner;Building+things+that+deploy)
+
 # Rugved Bane
+
+![Profile Views](https://komarev.com/ghpvc/?username=RugvedBane&color=blue&style=flat)
 
 AI Engineer Intern · CS Student · Navi Mumbai, India
 
 Currently interning at **Nirikshan AI** (GenAI / CV / ML startup), working through a structured ML/DL curriculum — from classical ML to CNNs and Transfer Learning. I build things that actually deploy.
+
+---
+
+### Currently Learning
+
+- CNNs and Transfer Learning (ResNet, VGG, EfficientNet)
+- Computer Vision pipelines with OpenCV
+- Going deep on Deep Learning — ANN → CNN → beyond
 
 ---
 
@@ -22,4 +34,5 @@ Currently interning at **Nirikshan AI** (GenAI / CV / ML startup), working throu
 ---
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:rugvedbane76@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/rugvedbane/)
 [![Kaggle](https://img.shields.io/badge/Kaggle-20BEFF?style=flat&logo=kaggle&logoColor=white)](https://www.kaggle.com/rugvedbane)
