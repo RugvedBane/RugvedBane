@@ -2,16 +2,22 @@
 
 # Rugved Bane
 
-![Profile Views](https://komarev.com/ghpvc/?username=RugvedBane&color=blue&style=flat)
-
 AI Engineer Intern · CS Student · Navi Mumbai, India
 
-Currently interning at **Nirikshan AI** (GenAI / CV / ML startup), working through a structured ML/DL curriculum — from classical ML to CNNs and Transfer Learning. I build things that actually deploy.
+Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structured ML/DL curriculum — ANN → CNN → Transfer Learning. Projects are deployed, not just notebooks.
+
+---
+
+### Projects
+
+| Project | Links |
+|---|---|
+| 🏠 California House Price Predictor | [Repo](https://github.com/RugvedBane/california-house-price) · [Live](https://rugved-house-predictor.streamlit.app) |
+| 🥊 UFC Fight Predictor | [Repo](https://github.com/RugvedBane/UFC-Predictor) · [Live](https://rugvedbane-ufc-predictor.streamlit.app) |
 
 ---
 
 ### Currently Learning
-
 - CNNs and Transfer Learning (ResNet, VGG, EfficientNet)
 - Computer Vision pipelines with OpenCV
 - Going deep on Deep Learning — ANN → CNN → beyond
@@ -19,17 +25,23 @@ Currently interning at **Nirikshan AI** (GenAI / CV / ML startup), working throu
 ---
 
 ### Stack
-
 ![Python](https://img.shields.io/badge/Python-3670A0?style=flat&logo=python&logoColor=ffdd54)
 ![Scikit-learn](https://img.shields.io/badge/Scikit--learn-F7931E?style=flat&logo=scikit-learn&logoColor=white)
 ![XGBoost](https://img.shields.io/badge/XGBoost-FF6600?style=flat)
 ![LightGBM](https://img.shields.io/badge/LightGBM-2980B9?style=flat)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=flat&logo=tensorflow&logoColor=white)
+![Keras](https://img.shields.io/badge/Keras-D00000?style=flat&logo=keras&logoColor=white)
 ![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=flat&logo=OpenCV&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-005571?style=flat&logo=fastapi)
 ![Streamlit](https://img.shields.io/badge/Streamlit-FF4B4B?style=flat&logo=streamlit&logoColor=white)
 ![Pandas](https://img.shields.io/badge/Pandas-150458?style=flat&logo=pandas&logoColor=white)
 ![NumPy](https://img.shields.io/badge/NumPy-013243?style=flat&logo=numpy&logoColor=white)
 ![Git](https://img.shields.io/badge/Git-F05032?style=flat&logo=git&logoColor=white)
+
+---
+
+![Stats](https://github-readme-stats.vercel.app/api?username=RugvedBane&show_icons=true&theme=github_dark&hide_border=true)
+![Streak](https://streak-stats.demolab.com?user=RugvedBane&theme=github-dark-blue&hide_border=true)
 
 ---
 
