@@ -12,9 +12,8 @@ Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structu
 
 | Project | Links |
 |---|---|
-| 🏠 California House Price Predictor | [Repo](https://github.com/RugvedBane/california-house-price) · [Live](https://rugved-house-predictor.streamlit.app) |
-| 🥊 UFC Fight Predictor | [Repo](https://github.com/RugvedBane/UFC-Predictor) · [Live](https://rugvedbane-ufc-predictor.streamlit.app) |
-
+| 🏠 California House Price Predictor | [Repo](https://github.com/RugvedBane/house-price-predictor) · [Live](https://house-price-predictor-rugved.streamlit.app/) |
+| 🥊 UFC Fight Predictor | [Repo](https://github.com/RugvedBane/UFC-Predictor) · [Live](https://ufc-predictor-rugvedbane.streamlit.app/) |
 ---
 
 ### Currently Learning
@@ -40,7 +39,7 @@ Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structu
 
 ---
 
-![Stats](https://github-readme-stats.vercel.app/api?username=RugvedBane&show_icons=true&theme=github_dark&hide_border=true)
+![Stats](https://github-readme-stats-one-peach-46.vercel.app/api?username=RugvedBane&show_icons=true&theme=github_dark&hide_border=true)
 ![Streak](https://streak-stats.demolab.com?user=RugvedBane&theme=github-dark-blue&hide_border=true)
 
 ---
