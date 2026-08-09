@@ -12,8 +12,10 @@ Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structu
 
 | Project | Links |
 |---|---|
-| 🏠 California House Price Predictor | [Repo](https://github.com/RugvedBane/house-price-predictor) · [Live](https://house-price-predictor-rugved.streamlit.app/) |
-| 🥊 UFC Fight Predictor | [Repo](https://github.com/RugvedBane/UFC-Predictor) · [Live](https://ufc-predictor-rugvedbane.streamlit.app/) |
+| California House Price Predictor | [Repo](https://github.com/RugvedBane/house-price-predictor) · [Live](https://house-price-predictor-rugved.streamlit.app/) |
+| UFC Fight Predictor | [Repo](https://github.com/RugvedBane/UFC-Predictor) · [Live](https://ufc-predictor-rugvedbane.streamlit.app/) |
+| Student Health Risk Prediction | [Repo](https://github.com/RugvedBane/Student-Health-Risk-PS-S6E7) · [Kaggle](https://www.kaggle.com/code/rugvedbane/student-health-risk-lightgbm-optuna-0-95014) |
+| Netflix Data Analysis | [Repo](https://github.com/RugvedBane/Netflix-data-Analysis) · [Kaggle](https://www.kaggle.com/code/rugvedbane/netflix-data-analysis) |
 ---
 
 ### Currently Learning
