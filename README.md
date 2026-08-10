@@ -4,7 +4,7 @@
 
 AI Engineer Intern · CS Student · Navi Mumbai, India
 
-Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structured ML/DL curriculum — ANN → CNN → Transfer Learning. Projects are deployed, not just notebooks.
+Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structured ML/DL curriculum — ANN → CNN → Transfer Learning. Alongside the internship, I build and deploy my own ML projects beyond notebooks.
 
 ---
 
