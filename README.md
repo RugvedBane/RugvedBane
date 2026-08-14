@@ -43,7 +43,6 @@ Interning at **Nirikshan AI** (GenAI / CV / ML startup), going through a structu
 ---
 
 ![Stats](https://github-readme-stats-one-peach-46.vercel.app/api?username=RugvedBane&show_icons=true&theme=github_dark&hide_border=true)
-![Streak](https://streak-stats.demolab.com?user=RugvedBane&theme=github-dark-blue&hide_border=true)
 
 ---
 
