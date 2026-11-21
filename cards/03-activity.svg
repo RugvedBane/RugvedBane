@@ -120,7 +120,7 @@
 
     <text x="28" y="91" fill="#58A6FF"
           font-size="26" font-weight="750">
-        147
+        148
     </text>
 
     <text x="29" y="108" fill="#587064" font-size="9">
@@ -234,8 +234,8 @@
         </text>
         
         <rect class="bar"
-              x="500" y="185"
-              width="29" height="28"
+              x="500" y="186"
+              width="29" height="27"
               rx="4" fill="#58A6FF"/>
 
         <text x="514" y="238"
@@ -245,8 +245,8 @@
         </text>
         
         <rect class="bar"
-              x="565" y="163"
-              width="29" height="50"
+              x="565" y="164"
+              width="29" height="49"
               rx="4" fill="#58A6FF"/>
 
         <text x="579" y="238"
@@ -256,8 +256,8 @@
         </text>
         
         <rect class="bar"
-              x="630" y="161"
-              width="29" height="52"
+              x="630" y="162"
+              width="29" height="51"
               rx="4" fill="#58A6FF"/>
 
         <text x="644" y="238"
@@ -267,8 +267,8 @@
         </text>
         
         <rect class="bar"
-              x="695" y="185"
-              width="29" height="28"
+              x="695" y="186"
+              width="29" height="27"
               rx="4" fill="#58A6FF"/>
 
         <text x="709" y="238"
