@@ -98,7 +98,7 @@
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#58A6FF">
+        <circle cx="832" cy="26" r="3" fill="#2F6B4F">
             <animate
                 attributeName="opacity"
                 values=".3;1;.3"

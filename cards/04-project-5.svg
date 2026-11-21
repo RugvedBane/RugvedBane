@@ -98,7 +98,7 @@
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#58A6FF">
+        <circle cx="832" cy="26" r="3" fill="#2F6B4F">
             <animate
                 attributeName="opacity"
                 values=".3;1;.3"
@@ -109,7 +109,7 @@
         </circle>
         
     
-        <text x="24" y="30" fill="#58A6FF"
+        <text x="24" y="30" fill="#2F6B4F"
               font-size="9" class="mono">
             FEATURED PROJECT / 05
         </text>
@@ -119,7 +119,7 @@
             Netflix Data Analysis
         </text>
 
-        <text x="25" y="98" fill="#58A6FF" font-size="12">
+        <text x="25" y="98" fill="#2F6B4F" font-size="12">
             Exploratory data analysis
         </text>
 
@@ -128,7 +128,7 @@
         </text>
 
         <a href="https://github.com/RugvedBane/Netflix-data-Analysis">
-            <text x="25" y="163" fill="#58A6FF"
+            <text x="25" y="163" fill="#2F6B4F"
                   font-size="10" class="mono">
                 SOURCE REPOSITORY ↗
             </text>
@@ -142,7 +142,7 @@
         
             <a href="https://www.kaggle.com/code/rugvedbane/netflix-data-analysis">
                 <text x="690" y="162"
-                      fill="#58A6FF" font-size="11">
+                      fill="#2F6B4F" font-size="11">
                     LIVE DEMO ↗
                 </text>
             </a>
