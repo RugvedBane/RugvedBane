@@ -4,6 +4,11 @@
 Usage:
     python scripts/render_cards.py
     STATIC=1 python scripts/render_cards.py
+
+Extra files the hero card needs (commit them to your repo):
+    assets/portrait-sketch.png
+    assets/InstrumentSerif-Regular.ttf
+    assets/InstrumentSerif-Italic.ttf
 """
 
 import os
@@ -20,13 +25,20 @@ from datetime import date, timedelta
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / "cards"
 DATA = ROOT / "data" / "contributions.json"
+ASSETS = ROOT / "assets"
 
 USERNAME = os.getenv("GITHUB_USERNAME", "RugvedBane")
 NAME = os.getenv("PROFILE_NAME", "Rugved Bane")
 
-TAGLINE = os.getenv(
-    "PROFILE_TAGLINE",
-    "CS Student · ML Engineer · Kaggle Expert · Open Source Contributor"
+# Hero card text
+HERO_LABEL = os.getenv("HERO_LABEL", "CS STUDENT")
+TAGLINE_1 = os.getenv(
+    "PROFILE_TAGLINE_1",
+    "I build Machine Learning and GenAI systems."
+)
+TAGLINE_2 = os.getenv(
+    "PROFILE_TAGLINE_2",
+    "Open source contributor · Kaggle Expert."
 )
 
 # Forest green + warm off-white palette
@@ -170,8 +182,8 @@ def load_fonts():
     result = []
 
     for font in ("Inter", "FiraCode"):
-        source = ROOT / "assets" / f"{font}.ttf"
-        output = ROOT / "assets" / f"{font}.woff"
+        source = ASSETS / f"{font}.ttf"
+        output = ASSETS / f"{font}.woff"
 
         uri = ""
 
@@ -199,6 +211,43 @@ def load_fonts():
         result.append(uri)
 
     return result
+
+
+def load_serif_fonts():
+    """Embed Instrument Serif (regular + italic), subset to the name only.
+
+    Returns (regular_uri, italic_uri). Empty strings if unavailable, in
+    which case the hero falls back to Georgia / Times.
+    """
+
+    glyphs = "".join(sorted(set(NAME)))
+    uris = []
+
+    for style in ("Regular", "Italic"):
+        source = ASSETS / f"InstrumentSerif-{style}.ttf"
+        output = ASSETS / f"InstrumentSerif-{style}.woff"
+
+        uri = ""
+
+        if source.exists() and shutil.which("pyftsubset"):
+            subprocess.run([
+                "pyftsubset",
+                str(source),
+                f"--text={glyphs}",
+                f"--output-file={output}",
+                "--flavor=woff",
+                "--layout-features="
+            ], check=True)
+
+        if output.exists():
+            uri = (
+                "data:font/woff;base64,"
+                + base64.b64encode(output.read_bytes()).decode()
+            )
+
+        uris.append(uri)
+
+    return uris
 
 
 def svg_start(width, height, delay, font_data):
@@ -356,60 +405,82 @@ def save_card(filename, body, width, height, delay, fonts):
 
 
 def hero(fonts):
-    portrait_url = os.getenv("PORTRAIT_URL", "")
+    """Top card: label, big serif name, tagline, sketch portrait."""
 
+    serif_regular, serif_italic = load_serif_fonts()
+
+    serif_css = ""
+
+    if serif_regular:
+        serif_css += (
+            "@font-face{font-family:'Instrument Serif';"
+            "font-style:normal;"
+            f"src:url('{serif_regular}') format('woff')}}"
+        )
+
+    if serif_italic:
+        serif_css += (
+            "@font-face{font-family:'Instrument Serif';"
+            "font-style:italic;"
+            f"src:url('{serif_italic}') format('woff')}}"
+        )
+
+    parts = NAME.split()
+    first = parts[0] if parts else NAME
+    rest = " ".join(parts[1:])
+
+    # Sketch portrait (transparent PNG), embedded so the SVG is standalone.
     portrait = ""
+    portrait_file = ASSETS / "portrait-sketch.png"
 
-    if portrait_url:
+    if portrait_file.exists():
+        data = base64.b64encode(portrait_file.read_bytes()).decode()
+        uri = f"data:image/png;base64,{data}"
+
         portrait = f"""
-        <defs>
-            <clipPath id="portrait">
-                <circle cx="790" cy="91" r="48"/>
-            </clipPath>
-        </defs>
-
-        <image
-            href="{esc(portrait_url)}"
-            xlink:href="{esc(portrait_url)}"
-            x="742" y="43"
-            width="96" height="96"
-            preserveAspectRatio="xMidYMid slice"
-            clip-path="url(#portrait)"
-        />
-
-        <circle cx="790" cy="91" r="49"
-                fill="none" stroke="{ACCENT}" stroke-width="2"/>
+        <image x="510" y="-2" width="320" height="300"
+               preserveAspectRatio="xMidYMid meet"
+               xlink:href="{uri}"/>
         """
 
     body = f"""
-    <defs>
-        <linearGradient id="shine">
-            <stop stop-color="{ACCENT}" stop-opacity=".20"/>
-            <stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/>
-        </linearGradient>
-    </defs>
+    <style>
+        {serif_css}
+        .serif {{
+            font-family: 'Instrument Serif', Georgia,
+                         'Times New Roman', serif;
+        }}
+    </style>
 
-    <rect x="2" y="2" width="856" height="176"
-          rx="17" fill="url(#shine)" class="glow"/>
+    <circle cx="38" cy="46" r="3.5" fill="{ACCENT}"/>
 
-    <text x="34" y="91" fill="{TEXT}"
-          font-size="43" font-weight="750">
-        {esc(NAME)}
+    <text x="50" y="50" fill="{MUTED}" font-size="11"
+          letter-spacing="1.5" class="mono">
+        {esc(HERO_LABEL)}
     </text>
 
-    <text x="36" y="124" fill="{MUTED}" font-size="15">
-        {esc(TAGLINE)}
+    <text x="34" y="128" fill="{TEXT}" font-size="92"
+          letter-spacing="-1" class="serif">
+        {esc(first)}
     </text>
 
-    <text x="36" y="153" fill="{ACCENT}"
-          font-size="11" class="mono">
-        MACHINE LEARNING · GENERATIVE AI · OPEN SOURCE
+    <text x="34" y="214" fill="{ACCENT}" font-size="92"
+          font-style="italic" letter-spacing="-1" class="serif">
+        {esc(rest)}
+    </text>
+
+    <text x="38" y="250" fill="{MUTED}" font-size="14">
+        {esc(TAGLINE_1)}
+    </text>
+
+    <text x="38" y="270" fill="{MUTED}" font-size="14">
+        {esc(TAGLINE_2)}
     </text>
 
     {portrait}
     """
 
-    save_card("01-hero.svg", body, 860, 180, 0, fonts)
+    save_card("01-hero.svg", body, 860, 300, 0, fonts)
 
 
 def link_tiles(fonts):
