@@ -19,50 +19,6 @@
             }
 
             
-        .card {
-            animation: enter .85s ease-out 1.8s both;
-        }
-
-        .glow {
-            animation: glow 3.5s ease-in-out 1.8s infinite alternate;
-        }
-
-        .bar {
-            transform-box: fill-box;
-            transform-origin: bottom;
-            animation: grow .9s ease-out 2.0s both;
-        }
-
-        .cell {
-            animation: appear .5s ease-out 1.8s both;
-        }
-
-        @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            from { opacity: .2; }
-            to { opacity: .8; }
-        }
-
-        @keyframes grow {
-            from { transform: scaleY(.02); }
-            to { transform: scaleY(1); }
-        }
-
-        @keyframes appear {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -87,99 +43,89 @@
         </style>
 
         <rect width="100%" height="100%"
-              rx="19" fill="#0D1117"/>
+              rx="19" fill="#F4F1E7"/>
 
         <rect x="1" y="1"
               width="858"
               height="258"
               rx="18"
               fill="none"
-              stroke="#30363D"/>
+              stroke="#CCD5C9"/>
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#58A6FF">
-            <animate
-                attributeName="opacity"
-                values=".3;1;.3"
-                dur="2.8s"
-                begin="1.8s"
-                repeatCount="indefinite"
-            />
-        </circle>
-        
     
-    <text x="27" y="31" fill="#E6EDF3"
+    <text x="27" y="31" fill="#173D32"
           font-size="18" font-weight="720">
         Open-source contributions
     </text>
 
     <text x="817" y="31" text-anchor="end"
-          fill="#8B949E" font-size="9" class="mono">
-        3 MERGED · 1 OPEN
+          fill="#587064" font-size="9" class="mono">
+        6+ PRs MERGED
     </text>
 
     
-        <text x="27" y="63" fill="#E6EDF3"
+        <text x="27" y="63" fill="#173D32"
               font-size="13">
             scikit-learn/scikit-learn
         </text>
 
-        <text x="27" y="79" fill="#8B949E"
+        <text x="27" y="79" fill="#587064"
               font-size="10">
             RFECV per-split ranking and support shapes · PR #35174
         </text>
 
         <text x="817" y="68" text-anchor="end"
-              fill="#3FB950" font-size="9"
+              fill="#2F6B4F" font-size="9"
               class="mono" font-weight="700">
             MERGED
         </text>
         
-        <text x="27" y="111" fill="#E6EDF3"
+        <text x="27" y="111" fill="#173D32"
               font-size="13">
             scikit-learn/scikit-learn
         </text>
 
-        <text x="27" y="127" fill="#8B949E"
+        <text x="27" y="127" fill="#587064"
               font-size="10">
             HistGradientBoosting early-stopping fix · PR #35176
         </text>
 
         <text x="817" y="116" text-anchor="end"
-              fill="#3FB950" font-size="9"
+              fill="#2F6B4F" font-size="9"
               class="mono" font-weight="700">
             MERGED
         </text>
         
-        <text x="27" y="159" fill="#E6EDF3"
+        <text x="27" y="159" fill="#173D32"
               font-size="13">
             feature-engine/feature_engine
         </text>
 
-        <text x="27" y="175" fill="#8B949E"
+        <text x="27" y="175" fill="#587064"
               font-size="10">
             Feature-engine contribution · PR #1120
         </text>
 
         <text x="817" y="164" text-anchor="end"
-              fill="#D29922" font-size="9"
+              fill="#A36B20" font-size="9"
               class="mono" font-weight="700">
             OPEN
         </text>
         
-        <text x="27" y="207" fill="#E6EDF3"
+        <text x="27" y="207" fill="#173D32"
               font-size="13">
             philpaz/recusal
         </text>
 
-        <text x="27" y="223" fill="#8B949E"
+        <text x="27" y="223" fill="#587064"
               font-size="10">
             Validation helper + 14 tests · PR #63
         </text>
 
         <text x="817" y="212" text-anchor="end"
-              fill="#3FB950" font-size="9"
+              fill="#2F6B4F" font-size="9"
               class="mono" font-weight="700">
             MERGED
         </text>

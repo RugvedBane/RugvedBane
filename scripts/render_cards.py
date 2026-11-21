@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate animated SVG cards for a GitHub profile README.
+"""Generate animated forest-green SVG cards for a GitHub profile README.
 
 Usage:
     python scripts/render_cards.py
@@ -23,19 +23,25 @@ DATA = ROOT / "data" / "contributions.json"
 
 USERNAME = os.getenv("GITHUB_USERNAME", "RugvedBane")
 NAME = os.getenv("PROFILE_NAME", "Rugved Bane")
+
 TAGLINE = os.getenv(
     "PROFILE_TAGLINE",
-    "CS Student · ML Engineer · Kaggle Competitor · Open Source Contributor"
+    "CS Student · ML Engineer · Kaggle Expert · Open Source Contributor"
 )
 
-ACCENT = os.getenv("BRAND_COLOR", "#58A6FF")
-BG = "#0D1117"
-PANEL = "#161B22"
-TEXT = "#E6EDF3"
-MUTED = "#8B949E"
-BORDER = "#30363D"
+# Forest green + warm off-white palette
+ACCENT = os.getenv("BRAND_COLOR", "#2F6B4F")
+BG = "#F4F1E7"
+PANEL = "#EAE6D9"
+TEXT = "#173D32"
+MUTED = "#587064"
+BORDER = "#CCD5C9"
+DARK_GREEN = "#173D32"
+MID_GREEN = "#245744"
+LIGHT_GREEN = "#A8C686"
 
 STATIC = os.getenv("STATIC", "0") == "1"
+
 
 # Featured repositories
 PROJECTS = [
@@ -48,7 +54,7 @@ PROJECTS = [
         ),
         "repo": f"https://github.com/{USERNAME}/Kwest",
         "demo": "",
-        "tag": "FLAGSHIP"
+        "tag": "GENAI"
     },
     {
         "name": "Deepfake Audio Detector",
@@ -75,10 +81,10 @@ PROJECTS = [
     {
         "name": "Student Health Risk Prediction",
         "subtitle": "Kaggle competition",
-        "description": "LightGBM + Optuna modelling workflow.",
+        "description": "LightGBM + Optuna competition modelling workflow.",
         "repo": f"https://github.com/{USERNAME}/Student-Health-Risk-PS-S6E7",
         "demo": "https://www.kaggle.com/code/rugvedbane/student-health-risk-lightgbm-optuna-0-95014",
-        "tag": "KAGGLE"
+        "tag": "COMPETITION"
     },
     {
         "name": "Netflix Data Analysis",
@@ -115,7 +121,6 @@ def calculate_stats(data):
 
     today = date.today()
 
-    # Current streak, allowing yesterday as the starting point
     cursor = today if counts.get(today, 0) else today - timedelta(days=1)
 
     streak = 0
@@ -123,7 +128,6 @@ def calculate_stats(data):
         streak += 1
         cursor -= timedelta(days=1)
 
-    # Monthly contributions over the last 12 months
     months = []
 
     for offset in range(11, -1, -1):
@@ -380,7 +384,7 @@ def hero(fonts):
     body = f"""
     <defs>
         <linearGradient id="shine">
-            <stop stop-color="{ACCENT}" stop-opacity=".25"/>
+            <stop stop-color="{ACCENT}" stop-opacity=".20"/>
             <stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/>
         </linearGradient>
     </defs>
@@ -388,23 +392,18 @@ def hero(fonts):
     <rect x="2" y="2" width="856" height="176"
           rx="17" fill="url(#shine)" class="glow"/>
 
-    <text x="34" y="43" fill="{ACCENT}"
-          font-size="11" letter-spacing="3" class="mono">
-        HELLO, WORLD — I'M
-    </text>
-
-    <text x="34" y="99" fill="{TEXT}"
+    <text x="34" y="91" fill="{TEXT}"
           font-size="43" font-weight="750">
         {esc(NAME)}
     </text>
 
-    <text x="36" y="132" fill="{MUTED}" font-size="15">
+    <text x="36" y="124" fill="{MUTED}" font-size="15">
         {esc(TAGLINE)}
     </text>
 
-    <text x="36" y="160" fill="{ACCENT}"
+    <text x="36" y="153" fill="{ACCENT}"
           font-size="11" class="mono">
-        github.com/{esc(USERNAME)}
+        MACHINE LEARNING · GENERATIVE AI · OPEN SOURCE
     </text>
 
     {portrait}
@@ -415,12 +414,16 @@ def hero(fonts):
 
 def link_tiles(fonts):
     links = [
-        ("KAGGLE", "Competitions & notebooks",
-         "https://www.kaggle.com/rugvedbane"),
-        ("GITHUB", "Projects & contributions",
-         f"https://github.com/{USERNAME}"),
-        ("LINKEDIN", "Connect professionally",
-         "https://www.linkedin.com/in/rugvedbane/")
+        (
+            "KAGGLE",
+            "Competitions & notebooks",
+            "https://www.kaggle.com/rugvedbane"
+        ),
+        (
+            "LINKEDIN",
+            "Professional profile",
+            "https://www.linkedin.com/in/rugvedbane/"
+        )
     ]
 
     for i, (title, subtitle, url) in enumerate(links, 1):
@@ -458,6 +461,11 @@ def link_tiles(fonts):
             fonts
         )
 
+    # Remove the old third social card if it exists.
+    old_card = OUT / "02-link-3.svg"
+    if old_card.exists():
+        old_card.unlink()
+
 
 def activity_card(stats, fonts):
     max_value = max(
@@ -467,10 +475,14 @@ def activity_card(stats, fonts):
 
     bars = []
 
+    # Bars are deliberately placed BELOW all statistics.
+    chart_baseline = 213
+    chart_height = 65
+
     for i, (month, value) in enumerate(stats["months"]):
         x = 45 + i * 65
-        height = max(3, round(82 * value / max_value))
-        y = 169 - height
+        height = max(3, round(chart_height * value / max_value))
+        y = chart_baseline - height
 
         bars.append(f"""
         <rect class="bar"
@@ -478,7 +490,7 @@ def activity_card(stats, fonts):
               width="29" height="{height}"
               rx="4" fill="{ACCENT}"/>
 
-        <text x="{x + 14}" y="187"
+        <text x="{x + 14}" y="238"
               text-anchor="middle"
               fill="{MUTED}" font-size="9">
             {month}
@@ -504,38 +516,38 @@ def activity_card(stats, fonts):
         TOTAL CONTRIBUTIONS
     </text>
 
-    <text x="302" y="88" fill="{TEXT}" font-size="23">
+    <text x="302" y="91" fill="{TEXT}" font-size="23">
         {stats['streak']}
     </text>
 
-    <text x="303" y="105" fill="{MUTED}" font-size="9">
+    <text x="303" y="108" fill="{MUTED}" font-size="9">
         DAY STREAK
     </text>
 
-    <text x="452" y="88" fill="{TEXT}" font-size="23">
+    <text x="452" y="91" fill="{TEXT}" font-size="23">
         {stats['active']}
     </text>
 
-    <text x="453" y="105" fill="{MUTED}" font-size="9">
+    <text x="453" y="108" fill="{MUTED}" font-size="9">
         ACTIVE DAYS
     </text>
 
-    <text x="625" y="88" fill="{TEXT}" font-size="23">
+    <text x="625" y="91" fill="{TEXT}" font-size="23">
         {stats['busiest_count']}
     </text>
 
-    <text x="626" y="105" fill="{MUTED}" font-size="9">
+    <text x="626" y="108" fill="{MUTED}" font-size="9">
         BUSIEST DAY
     </text>
 
-    <text x="626" y="122" fill="{MUTED}" font-size="9">
+    <text x="626" y="124" fill="{MUTED}" font-size="9">
         {esc(stats['busiest_date'])}
     </text>
 
     {''.join(bars)}
     """
 
-    save_card("03-activity.svg", body, 860, 205, .52, fonts)
+    save_card("03-activity.svg", body, 860, 250, .52, fonts)
 
 
 def project_cards(fonts):
@@ -626,8 +638,8 @@ def open_source_card(fonts):
         y = 63 + i * 48
 
         status_color = (
-            "#3FB950" if status == "MERGED"
-            else "#D29922"
+            "#2F6B4F" if status == "MERGED"
+            else "#A36B20"
         )
 
         rows.append(f"""
@@ -656,7 +668,7 @@ def open_source_card(fonts):
 
     <text x="817" y="31" text-anchor="end"
           fill="{MUTED}" font-size="9" class="mono">
-        3 MERGED · 1 OPEN
+        6+ PRs MERGED
     </text>
 
     {''.join(rows)}
@@ -667,11 +679,11 @@ def open_source_card(fonts):
 
 def contribution_graph(stats, fonts):
     colors = [
-        "#161B22",
-        "#102F1C",
-        "#176B35",
-        "#229B4A",
-        ACCENT
+        "#E5E8DD",
+        "#C6D8C2",
+        "#83AD8B",
+        "#477D5A",
+        "#245744"
     ]
 
     cells = []
@@ -698,8 +710,9 @@ def contribution_graph(stats, fonts):
         </rect>
         """)
 
+    # Move legend down to create clear separation from the grid.
     legend = "".join(
-        f'<rect x="{58+i*14}" y="157" width="9" height="9" '
+        f'<rect x="{58+i*14}" y="178" width="9" height="9" '
         f'rx="2" fill="{color}"/>'
         for i, color in enumerate(colors)
     )
@@ -711,23 +724,23 @@ def contribution_graph(stats, fonts):
     </text>
 
     <text x="28" y="44" fill="{MUTED}" font-size="9">
-        Past year · Contribution intensity in brand blue
+        Past year · Contribution intensity in forest green
     </text>
 
     {''.join(cells)}
 
-    <text x="28" y="165" fill="{MUTED}" font-size="9">
+    <text x="28" y="186" fill="{MUTED}" font-size="9">
         Less
     </text>
 
     {legend}
 
-    <text x="131" y="165" fill="{MUTED}" font-size="9">
+    <text x="131" y="186" fill="{MUTED}" font-size="9">
         More
     </text>
     """
 
-    save_card("10-contributions.svg", body, 860, 185, 2.25, fonts)
+    save_card("10-contributions.svg", body, 860, 205, 2.25, fonts)
 
 
 def main():

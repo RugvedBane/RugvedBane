@@ -2,8 +2,8 @@
     <svg xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          width="860"
-         height="185"
-         viewBox="0 0 860 185">
+         height="205"
+         viewBox="0 0 860 205">
 
         <title>Rugved Bane - GitHub Profile</title>
 
@@ -19,50 +19,6 @@
             }
 
             
-        .card {
-            animation: enter .85s ease-out 2.25s both;
-        }
-
-        .glow {
-            animation: glow 3.5s ease-in-out 2.25s infinite alternate;
-        }
-
-        .bar {
-            transform-box: fill-box;
-            transform-origin: bottom;
-            animation: grow .9s ease-out 2.45s both;
-        }
-
-        .cell {
-            animation: appear .5s ease-out 2.25s both;
-        }
-
-        @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            from { opacity: .2; }
-            to { opacity: .8; }
-        }
-
-        @keyframes grow {
-            from { transform: scaleY(.02); }
-            to { transform: scaleY(1); }
-        }
-
-        @keyframes appear {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -87,42 +43,32 @@
         </style>
 
         <rect width="100%" height="100%"
-              rx="19" fill="#0D1117"/>
+              rx="19" fill="#F4F1E7"/>
 
         <rect x="1" y="1"
               width="858"
-              height="183"
+              height="203"
               rx="18"
               fill="none"
-              stroke="#30363D"/>
+              stroke="#CCD5C9"/>
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#58A6FF">
-            <animate
-                attributeName="opacity"
-                values=".3;1;.3"
-                dur="2.8s"
-                begin="2.25s"
-                repeatCount="indefinite"
-            />
-        </circle>
-        
     
-    <text x="28" y="29" fill="#E6EDF3"
+    <text x="28" y="29" fill="#173D32"
           font-size="18" font-weight="720">
         Contribution graph
     </text>
 
-    <text x="28" y="44" fill="#8B949E" font-size="9">
-        Past year · Contribution intensity in brand blue
+    <text x="28" y="44" fill="#587064" font-size="9">
+        Past year · Contribution intensity in forest green
     </text>
 
     
         <rect class="cell"
               x="28" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-16:
@@ -134,7 +80,7 @@
         <rect class="cell"
               x="28" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-17:
@@ -146,7 +92,7 @@
         <rect class="cell"
               x="28" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-18:
@@ -158,7 +104,7 @@
         <rect class="cell"
               x="28" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-19:
@@ -170,7 +116,7 @@
         <rect class="cell"
               x="28" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-20:
@@ -182,7 +128,7 @@
         <rect class="cell"
               x="28" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-21:
@@ -194,7 +140,7 @@
         <rect class="cell"
               x="28" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-22:
@@ -206,7 +152,7 @@
         <rect class="cell"
               x="40" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-23:
@@ -218,7 +164,7 @@
         <rect class="cell"
               x="40" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-24:
@@ -230,7 +176,7 @@
         <rect class="cell"
               x="40" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-25:
@@ -242,7 +188,7 @@
         <rect class="cell"
               x="40" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-26:
@@ -254,7 +200,7 @@
         <rect class="cell"
               x="40" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-27:
@@ -266,7 +212,7 @@
         <rect class="cell"
               x="40" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-28:
@@ -278,7 +224,7 @@
         <rect class="cell"
               x="40" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-29:
@@ -290,7 +236,7 @@
         <rect class="cell"
               x="52" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-11-30:
@@ -302,7 +248,7 @@
         <rect class="cell"
               x="52" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-01:
@@ -314,7 +260,7 @@
         <rect class="cell"
               x="52" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-02:
@@ -326,7 +272,7 @@
         <rect class="cell"
               x="52" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-03:
@@ -338,7 +284,7 @@
         <rect class="cell"
               x="52" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-04:
@@ -350,7 +296,7 @@
         <rect class="cell"
               x="52" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-05:
@@ -362,7 +308,7 @@
         <rect class="cell"
               x="52" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-06:
@@ -374,7 +320,7 @@
         <rect class="cell"
               x="64" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-07:
@@ -386,7 +332,7 @@
         <rect class="cell"
               x="64" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-08:
@@ -398,7 +344,7 @@
         <rect class="cell"
               x="64" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-09:
@@ -410,7 +356,7 @@
         <rect class="cell"
               x="64" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-10:
@@ -422,7 +368,7 @@
         <rect class="cell"
               x="64" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-11:
@@ -434,7 +380,7 @@
         <rect class="cell"
               x="64" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-12:
@@ -446,7 +392,7 @@
         <rect class="cell"
               x="64" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-13:
@@ -458,7 +404,7 @@
         <rect class="cell"
               x="76" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-14:
@@ -470,7 +416,7 @@
         <rect class="cell"
               x="76" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-15:
@@ -482,7 +428,7 @@
         <rect class="cell"
               x="76" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-16:
@@ -494,7 +440,7 @@
         <rect class="cell"
               x="76" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-17:
@@ -506,7 +452,7 @@
         <rect class="cell"
               x="76" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-18:
@@ -518,7 +464,7 @@
         <rect class="cell"
               x="76" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-19:
@@ -530,7 +476,7 @@
         <rect class="cell"
               x="76" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-20:
@@ -542,7 +488,7 @@
         <rect class="cell"
               x="88" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-21:
@@ -554,7 +500,7 @@
         <rect class="cell"
               x="88" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-22:
@@ -566,7 +512,7 @@
         <rect class="cell"
               x="88" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-23:
@@ -578,7 +524,7 @@
         <rect class="cell"
               x="88" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-24:
@@ -590,7 +536,7 @@
         <rect class="cell"
               x="88" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-25:
@@ -602,7 +548,7 @@
         <rect class="cell"
               x="88" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-26:
@@ -614,7 +560,7 @@
         <rect class="cell"
               x="88" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-27:
@@ -626,7 +572,7 @@
         <rect class="cell"
               x="100" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-28:
@@ -638,7 +584,7 @@
         <rect class="cell"
               x="100" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-29:
@@ -650,7 +596,7 @@
         <rect class="cell"
               x="100" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-30:
@@ -662,7 +608,7 @@
         <rect class="cell"
               x="100" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2025-12-31:
@@ -674,7 +620,7 @@
         <rect class="cell"
               x="100" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-01:
@@ -686,7 +632,7 @@
         <rect class="cell"
               x="100" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-02:
@@ -698,7 +644,7 @@
         <rect class="cell"
               x="100" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-03:
@@ -710,7 +656,7 @@
         <rect class="cell"
               x="112" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-04:
@@ -722,7 +668,7 @@
         <rect class="cell"
               x="112" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-05:
@@ -734,7 +680,7 @@
         <rect class="cell"
               x="112" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-06:
@@ -746,7 +692,7 @@
         <rect class="cell"
               x="112" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-07:
@@ -758,7 +704,7 @@
         <rect class="cell"
               x="112" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-08:
@@ -770,7 +716,7 @@
         <rect class="cell"
               x="112" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-09:
@@ -782,7 +728,7 @@
         <rect class="cell"
               x="112" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-10:
@@ -794,7 +740,7 @@
         <rect class="cell"
               x="124" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-11:
@@ -806,7 +752,7 @@
         <rect class="cell"
               x="124" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-12:
@@ -818,7 +764,7 @@
         <rect class="cell"
               x="124" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-13:
@@ -830,7 +776,7 @@
         <rect class="cell"
               x="124" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-14:
@@ -842,7 +788,7 @@
         <rect class="cell"
               x="124" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-15:
@@ -854,7 +800,7 @@
         <rect class="cell"
               x="124" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-16:
@@ -866,7 +812,7 @@
         <rect class="cell"
               x="124" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-17:
@@ -878,7 +824,7 @@
         <rect class="cell"
               x="136" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-18:
@@ -890,7 +836,7 @@
         <rect class="cell"
               x="136" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-19:
@@ -902,7 +848,7 @@
         <rect class="cell"
               x="136" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-20:
@@ -914,7 +860,7 @@
         <rect class="cell"
               x="136" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-21:
@@ -926,7 +872,7 @@
         <rect class="cell"
               x="136" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-22:
@@ -938,7 +884,7 @@
         <rect class="cell"
               x="136" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-23:
@@ -950,7 +896,7 @@
         <rect class="cell"
               x="136" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-24:
@@ -962,7 +908,7 @@
         <rect class="cell"
               x="148" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-25:
@@ -974,7 +920,7 @@
         <rect class="cell"
               x="148" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-26:
@@ -986,7 +932,7 @@
         <rect class="cell"
               x="148" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-27:
@@ -998,7 +944,7 @@
         <rect class="cell"
               x="148" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-28:
@@ -1010,7 +956,7 @@
         <rect class="cell"
               x="148" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-29:
@@ -1022,7 +968,7 @@
         <rect class="cell"
               x="148" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-30:
@@ -1034,7 +980,7 @@
         <rect class="cell"
               x="148" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-01-31:
@@ -1046,7 +992,7 @@
         <rect class="cell"
               x="160" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-01:
@@ -1058,7 +1004,7 @@
         <rect class="cell"
               x="160" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-02:
@@ -1070,7 +1016,7 @@
         <rect class="cell"
               x="160" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-03:
@@ -1082,7 +1028,7 @@
         <rect class="cell"
               x="160" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-04:
@@ -1094,7 +1040,7 @@
         <rect class="cell"
               x="160" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-05:
@@ -1106,7 +1052,7 @@
         <rect class="cell"
               x="160" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-06:
@@ -1118,7 +1064,7 @@
         <rect class="cell"
               x="160" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-07:
@@ -1130,7 +1076,7 @@
         <rect class="cell"
               x="172" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-08:
@@ -1142,7 +1088,7 @@
         <rect class="cell"
               x="172" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-09:
@@ -1154,7 +1100,7 @@
         <rect class="cell"
               x="172" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-10:
@@ -1166,7 +1112,7 @@
         <rect class="cell"
               x="172" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-11:
@@ -1178,7 +1124,7 @@
         <rect class="cell"
               x="172" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-12:
@@ -1190,7 +1136,7 @@
         <rect class="cell"
               x="172" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-13:
@@ -1202,7 +1148,7 @@
         <rect class="cell"
               x="172" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-14:
@@ -1214,7 +1160,7 @@
         <rect class="cell"
               x="184" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-15:
@@ -1226,7 +1172,7 @@
         <rect class="cell"
               x="184" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-16:
@@ -1238,7 +1184,7 @@
         <rect class="cell"
               x="184" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-17:
@@ -1250,7 +1196,7 @@
         <rect class="cell"
               x="184" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-18:
@@ -1262,7 +1208,7 @@
         <rect class="cell"
               x="184" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-19:
@@ -1274,7 +1220,7 @@
         <rect class="cell"
               x="184" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-20:
@@ -1286,7 +1232,7 @@
         <rect class="cell"
               x="184" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-21:
@@ -1298,7 +1244,7 @@
         <rect class="cell"
               x="196" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-22:
@@ -1310,7 +1256,7 @@
         <rect class="cell"
               x="196" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-23:
@@ -1322,7 +1268,7 @@
         <rect class="cell"
               x="196" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-24:
@@ -1334,7 +1280,7 @@
         <rect class="cell"
               x="196" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-25:
@@ -1346,7 +1292,7 @@
         <rect class="cell"
               x="196" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-26:
@@ -1358,7 +1304,7 @@
         <rect class="cell"
               x="196" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-27:
@@ -1370,7 +1316,7 @@
         <rect class="cell"
               x="196" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-02-28:
@@ -1382,7 +1328,7 @@
         <rect class="cell"
               x="208" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-01:
@@ -1394,7 +1340,7 @@
         <rect class="cell"
               x="208" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-02:
@@ -1406,7 +1352,7 @@
         <rect class="cell"
               x="208" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-03:
@@ -1418,7 +1364,7 @@
         <rect class="cell"
               x="208" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-04:
@@ -1430,7 +1376,7 @@
         <rect class="cell"
               x="208" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-05:
@@ -1442,7 +1388,7 @@
         <rect class="cell"
               x="208" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-06:
@@ -1454,7 +1400,7 @@
         <rect class="cell"
               x="208" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-07:
@@ -1466,7 +1412,7 @@
         <rect class="cell"
               x="220" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-08:
@@ -1478,7 +1424,7 @@
         <rect class="cell"
               x="220" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-09:
@@ -1490,7 +1436,7 @@
         <rect class="cell"
               x="220" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-10:
@@ -1502,7 +1448,7 @@
         <rect class="cell"
               x="220" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-11:
@@ -1514,7 +1460,7 @@
         <rect class="cell"
               x="220" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-12:
@@ -1526,7 +1472,7 @@
         <rect class="cell"
               x="220" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-13:
@@ -1538,7 +1484,7 @@
         <rect class="cell"
               x="220" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-14:
@@ -1550,7 +1496,7 @@
         <rect class="cell"
               x="232" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-15:
@@ -1562,7 +1508,7 @@
         <rect class="cell"
               x="232" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-16:
@@ -1574,7 +1520,7 @@
         <rect class="cell"
               x="232" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-17:
@@ -1586,7 +1532,7 @@
         <rect class="cell"
               x="232" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-18:
@@ -1598,7 +1544,7 @@
         <rect class="cell"
               x="232" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-19:
@@ -1610,7 +1556,7 @@
         <rect class="cell"
               x="232" y="114"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-03-20:
@@ -1622,7 +1568,7 @@
         <rect class="cell"
               x="232" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-03-21:
@@ -1634,7 +1580,7 @@
         <rect class="cell"
               x="244" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-22:
@@ -1646,7 +1592,7 @@
         <rect class="cell"
               x="244" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-23:
@@ -1658,7 +1604,7 @@
         <rect class="cell"
               x="244" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-24:
@@ -1670,7 +1616,7 @@
         <rect class="cell"
               x="244" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-25:
@@ -1682,7 +1628,7 @@
         <rect class="cell"
               x="244" y="102"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-03-26:
@@ -1694,7 +1640,7 @@
         <rect class="cell"
               x="244" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-27:
@@ -1706,7 +1652,7 @@
         <rect class="cell"
               x="244" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-03-28:
@@ -1718,7 +1664,7 @@
         <rect class="cell"
               x="256" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-29:
@@ -1730,7 +1676,7 @@
         <rect class="cell"
               x="256" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-30:
@@ -1742,7 +1688,7 @@
         <rect class="cell"
               x="256" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-03-31:
@@ -1754,7 +1700,7 @@
         <rect class="cell"
               x="256" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-01:
@@ -1766,7 +1712,7 @@
         <rect class="cell"
               x="256" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-02:
@@ -1778,7 +1724,7 @@
         <rect class="cell"
               x="256" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-03:
@@ -1790,7 +1736,7 @@
         <rect class="cell"
               x="256" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-04:
@@ -1802,7 +1748,7 @@
         <rect class="cell"
               x="268" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-05:
@@ -1814,7 +1760,7 @@
         <rect class="cell"
               x="268" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-06:
@@ -1826,7 +1772,7 @@
         <rect class="cell"
               x="268" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-07:
@@ -1838,7 +1784,7 @@
         <rect class="cell"
               x="268" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-08:
@@ -1850,7 +1796,7 @@
         <rect class="cell"
               x="268" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-09:
@@ -1862,7 +1808,7 @@
         <rect class="cell"
               x="268" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-10:
@@ -1874,7 +1820,7 @@
         <rect class="cell"
               x="268" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-11:
@@ -1886,7 +1832,7 @@
         <rect class="cell"
               x="280" y="54"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-04-12:
@@ -1898,7 +1844,7 @@
         <rect class="cell"
               x="280" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-13:
@@ -1910,7 +1856,7 @@
         <rect class="cell"
               x="280" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-14:
@@ -1922,7 +1868,7 @@
         <rect class="cell"
               x="280" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-15:
@@ -1934,7 +1880,7 @@
         <rect class="cell"
               x="280" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-16:
@@ -1946,7 +1892,7 @@
         <rect class="cell"
               x="280" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-17:
@@ -1958,7 +1904,7 @@
         <rect class="cell"
               x="280" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-18:
@@ -1970,7 +1916,7 @@
         <rect class="cell"
               x="292" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-19:
@@ -1982,7 +1928,7 @@
         <rect class="cell"
               x="292" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-20:
@@ -1994,7 +1940,7 @@
         <rect class="cell"
               x="292" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-21:
@@ -2006,7 +1952,7 @@
         <rect class="cell"
               x="292" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-22:
@@ -2018,7 +1964,7 @@
         <rect class="cell"
               x="292" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-23:
@@ -2030,7 +1976,7 @@
         <rect class="cell"
               x="292" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-24:
@@ -2042,7 +1988,7 @@
         <rect class="cell"
               x="292" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-25:
@@ -2054,7 +2000,7 @@
         <rect class="cell"
               x="304" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-26:
@@ -2066,7 +2012,7 @@
         <rect class="cell"
               x="304" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-27:
@@ -2078,7 +2024,7 @@
         <rect class="cell"
               x="304" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-28:
@@ -2090,7 +2036,7 @@
         <rect class="cell"
               x="304" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-29:
@@ -2102,7 +2048,7 @@
         <rect class="cell"
               x="304" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-04-30:
@@ -2114,7 +2060,7 @@
         <rect class="cell"
               x="304" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-01:
@@ -2126,7 +2072,7 @@
         <rect class="cell"
               x="304" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-02:
@@ -2138,7 +2084,7 @@
         <rect class="cell"
               x="316" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-03:
@@ -2150,7 +2096,7 @@
         <rect class="cell"
               x="316" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-04:
@@ -2162,7 +2108,7 @@
         <rect class="cell"
               x="316" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-05:
@@ -2174,7 +2120,7 @@
         <rect class="cell"
               x="316" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-06:
@@ -2186,7 +2132,7 @@
         <rect class="cell"
               x="316" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-07:
@@ -2198,7 +2144,7 @@
         <rect class="cell"
               x="316" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-08:
@@ -2210,7 +2156,7 @@
         <rect class="cell"
               x="316" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-09:
@@ -2222,7 +2168,7 @@
         <rect class="cell"
               x="328" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-10:
@@ -2234,7 +2180,7 @@
         <rect class="cell"
               x="328" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-11:
@@ -2246,7 +2192,7 @@
         <rect class="cell"
               x="328" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-12:
@@ -2258,7 +2204,7 @@
         <rect class="cell"
               x="328" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-13:
@@ -2270,7 +2216,7 @@
         <rect class="cell"
               x="328" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-14:
@@ -2282,7 +2228,7 @@
         <rect class="cell"
               x="328" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-15:
@@ -2294,7 +2240,7 @@
         <rect class="cell"
               x="328" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-16:
@@ -2306,7 +2252,7 @@
         <rect class="cell"
               x="340" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-17:
@@ -2318,7 +2264,7 @@
         <rect class="cell"
               x="340" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-18:
@@ -2330,7 +2276,7 @@
         <rect class="cell"
               x="340" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-19:
@@ -2342,7 +2288,7 @@
         <rect class="cell"
               x="340" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-20:
@@ -2354,7 +2300,7 @@
         <rect class="cell"
               x="340" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-21:
@@ -2366,7 +2312,7 @@
         <rect class="cell"
               x="340" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-22:
@@ -2378,7 +2324,7 @@
         <rect class="cell"
               x="340" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-23:
@@ -2390,7 +2336,7 @@
         <rect class="cell"
               x="352" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-24:
@@ -2402,7 +2348,7 @@
         <rect class="cell"
               x="352" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-25:
@@ -2414,7 +2360,7 @@
         <rect class="cell"
               x="352" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-26:
@@ -2426,7 +2372,7 @@
         <rect class="cell"
               x="352" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-27:
@@ -2438,7 +2384,7 @@
         <rect class="cell"
               x="352" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-28:
@@ -2450,7 +2396,7 @@
         <rect class="cell"
               x="352" y="114"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-05-29:
@@ -2462,7 +2408,7 @@
         <rect class="cell"
               x="352" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-30:
@@ -2474,7 +2420,7 @@
         <rect class="cell"
               x="364" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-05-31:
@@ -2486,7 +2432,7 @@
         <rect class="cell"
               x="364" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-01:
@@ -2498,7 +2444,7 @@
         <rect class="cell"
               x="364" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-02:
@@ -2510,7 +2456,7 @@
         <rect class="cell"
               x="364" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-03:
@@ -2522,7 +2468,7 @@
         <rect class="cell"
               x="364" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-04:
@@ -2534,7 +2480,7 @@
         <rect class="cell"
               x="364" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-05:
@@ -2546,7 +2492,7 @@
         <rect class="cell"
               x="364" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-06:
@@ -2558,7 +2504,7 @@
         <rect class="cell"
               x="376" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-07:
@@ -2570,7 +2516,7 @@
         <rect class="cell"
               x="376" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-08:
@@ -2582,7 +2528,7 @@
         <rect class="cell"
               x="376" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-09:
@@ -2594,7 +2540,7 @@
         <rect class="cell"
               x="376" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-10:
@@ -2606,7 +2552,7 @@
         <rect class="cell"
               x="376" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-11:
@@ -2618,7 +2564,7 @@
         <rect class="cell"
               x="376" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-12:
@@ -2630,7 +2576,7 @@
         <rect class="cell"
               x="376" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-13:
@@ -2642,7 +2588,7 @@
         <rect class="cell"
               x="388" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-14:
@@ -2654,7 +2600,7 @@
         <rect class="cell"
               x="388" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-15:
@@ -2666,7 +2612,7 @@
         <rect class="cell"
               x="388" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-16:
@@ -2678,7 +2624,7 @@
         <rect class="cell"
               x="388" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-17:
@@ -2690,7 +2636,7 @@
         <rect class="cell"
               x="388" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-18:
@@ -2702,7 +2648,7 @@
         <rect class="cell"
               x="388" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-19:
@@ -2714,7 +2660,7 @@
         <rect class="cell"
               x="388" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-20:
@@ -2726,7 +2672,7 @@
         <rect class="cell"
               x="400" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-21:
@@ -2738,7 +2684,7 @@
         <rect class="cell"
               x="400" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-22:
@@ -2750,7 +2696,7 @@
         <rect class="cell"
               x="400" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-23:
@@ -2762,7 +2708,7 @@
         <rect class="cell"
               x="400" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-24:
@@ -2774,7 +2720,7 @@
         <rect class="cell"
               x="400" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-25:
@@ -2786,7 +2732,7 @@
         <rect class="cell"
               x="400" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-26:
@@ -2798,7 +2744,7 @@
         <rect class="cell"
               x="400" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-27:
@@ -2810,7 +2756,7 @@
         <rect class="cell"
               x="412" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-28:
@@ -2822,7 +2768,7 @@
         <rect class="cell"
               x="412" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-29:
@@ -2834,7 +2780,7 @@
         <rect class="cell"
               x="412" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-06-30:
@@ -2846,7 +2792,7 @@
         <rect class="cell"
               x="412" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-01:
@@ -2858,7 +2804,7 @@
         <rect class="cell"
               x="412" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-02:
@@ -2870,7 +2816,7 @@
         <rect class="cell"
               x="412" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-03:
@@ -2882,7 +2828,7 @@
         <rect class="cell"
               x="412" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-04:
@@ -2894,7 +2840,7 @@
         <rect class="cell"
               x="424" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-05:
@@ -2906,7 +2852,7 @@
         <rect class="cell"
               x="424" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-06:
@@ -2918,7 +2864,7 @@
         <rect class="cell"
               x="424" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-07:
@@ -2930,7 +2876,7 @@
         <rect class="cell"
               x="424" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-08:
@@ -2942,7 +2888,7 @@
         <rect class="cell"
               x="424" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-09:
@@ -2954,7 +2900,7 @@
         <rect class="cell"
               x="424" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-10:
@@ -2966,7 +2912,7 @@
         <rect class="cell"
               x="424" y="126"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-07-11:
@@ -2978,7 +2924,7 @@
         <rect class="cell"
               x="436" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-12:
@@ -2990,7 +2936,7 @@
         <rect class="cell"
               x="436" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-13:
@@ -3002,7 +2948,7 @@
         <rect class="cell"
               x="436" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-14:
@@ -3014,7 +2960,7 @@
         <rect class="cell"
               x="436" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-15:
@@ -3026,7 +2972,7 @@
         <rect class="cell"
               x="436" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-16:
@@ -3038,7 +2984,7 @@
         <rect class="cell"
               x="436" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-17:
@@ -3050,7 +2996,7 @@
         <rect class="cell"
               x="436" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-07-18:
@@ -3062,7 +3008,7 @@
         <rect class="cell"
               x="448" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-19:
@@ -3074,7 +3020,7 @@
         <rect class="cell"
               x="448" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-20:
@@ -3086,7 +3032,7 @@
         <rect class="cell"
               x="448" y="78"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-07-21:
@@ -3098,7 +3044,7 @@
         <rect class="cell"
               x="448" y="90"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-07-22:
@@ -3110,7 +3056,7 @@
         <rect class="cell"
               x="448" y="102"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-07-23:
@@ -3122,7 +3068,7 @@
         <rect class="cell"
               x="448" y="114"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-07-24:
@@ -3134,7 +3080,7 @@
         <rect class="cell"
               x="448" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-25:
@@ -3146,7 +3092,7 @@
         <rect class="cell"
               x="460" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-26:
@@ -3158,7 +3104,7 @@
         <rect class="cell"
               x="460" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-27:
@@ -3170,7 +3116,7 @@
         <rect class="cell"
               x="460" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-28:
@@ -3182,7 +3128,7 @@
         <rect class="cell"
               x="460" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-29:
@@ -3194,7 +3140,7 @@
         <rect class="cell"
               x="460" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-30:
@@ -3206,7 +3152,7 @@
         <rect class="cell"
               x="460" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-07-31:
@@ -3218,7 +3164,7 @@
         <rect class="cell"
               x="460" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-01:
@@ -3230,7 +3176,7 @@
         <rect class="cell"
               x="472" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-02:
@@ -3242,7 +3188,7 @@
         <rect class="cell"
               x="472" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-03:
@@ -3254,7 +3200,7 @@
         <rect class="cell"
               x="472" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-04:
@@ -3266,7 +3212,7 @@
         <rect class="cell"
               x="472" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-05:
@@ -3278,7 +3224,7 @@
         <rect class="cell"
               x="472" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-06:
@@ -3290,7 +3236,7 @@
         <rect class="cell"
               x="472" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-07:
@@ -3302,7 +3248,7 @@
         <rect class="cell"
               x="472" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-08:
@@ -3314,7 +3260,7 @@
         <rect class="cell"
               x="484" y="54"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-08-09:
@@ -3326,7 +3272,7 @@
         <rect class="cell"
               x="484" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-08-10:
@@ -3338,7 +3284,7 @@
         <rect class="cell"
               x="484" y="78"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-08-11:
@@ -3350,7 +3296,7 @@
         <rect class="cell"
               x="484" y="90"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-08-12:
@@ -3362,7 +3308,7 @@
         <rect class="cell"
               x="484" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-13:
@@ -3374,7 +3320,7 @@
         <rect class="cell"
               x="484" y="114"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-08-14:
@@ -3386,7 +3332,7 @@
         <rect class="cell"
               x="484" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-15:
@@ -3398,7 +3344,7 @@
         <rect class="cell"
               x="496" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-16:
@@ -3410,7 +3356,7 @@
         <rect class="cell"
               x="496" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-08-17:
@@ -3422,7 +3368,7 @@
         <rect class="cell"
               x="496" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-18:
@@ -3434,7 +3380,7 @@
         <rect class="cell"
               x="496" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-19:
@@ -3446,7 +3392,7 @@
         <rect class="cell"
               x="496" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-20:
@@ -3458,7 +3404,7 @@
         <rect class="cell"
               x="496" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-21:
@@ -3470,7 +3416,7 @@
         <rect class="cell"
               x="496" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-22:
@@ -3482,7 +3428,7 @@
         <rect class="cell"
               x="508" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-23:
@@ -3494,7 +3440,7 @@
         <rect class="cell"
               x="508" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-24:
@@ -3506,7 +3452,7 @@
         <rect class="cell"
               x="508" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-25:
@@ -3518,7 +3464,7 @@
         <rect class="cell"
               x="508" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-26:
@@ -3530,7 +3476,7 @@
         <rect class="cell"
               x="508" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-27:
@@ -3542,7 +3488,7 @@
         <rect class="cell"
               x="508" y="114"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-08-28:
@@ -3554,7 +3500,7 @@
         <rect class="cell"
               x="508" y="126"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-08-29:
@@ -3566,7 +3512,7 @@
         <rect class="cell"
               x="520" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-30:
@@ -3578,7 +3524,7 @@
         <rect class="cell"
               x="520" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-08-31:
@@ -3590,7 +3536,7 @@
         <rect class="cell"
               x="520" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-01:
@@ -3602,7 +3548,7 @@
         <rect class="cell"
               x="520" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-02:
@@ -3614,7 +3560,7 @@
         <rect class="cell"
               x="520" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-03:
@@ -3626,7 +3572,7 @@
         <rect class="cell"
               x="520" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-04:
@@ -3638,7 +3584,7 @@
         <rect class="cell"
               x="520" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-05:
@@ -3650,7 +3596,7 @@
         <rect class="cell"
               x="532" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-06:
@@ -3662,7 +3608,7 @@
         <rect class="cell"
               x="532" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-07:
@@ -3674,7 +3620,7 @@
         <rect class="cell"
               x="532" y="78"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-09-08:
@@ -3686,7 +3632,7 @@
         <rect class="cell"
               x="532" y="90"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-09:
@@ -3698,7 +3644,7 @@
         <rect class="cell"
               x="532" y="102"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-09-10:
@@ -3710,7 +3656,7 @@
         <rect class="cell"
               x="532" y="114"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-11:
@@ -3722,7 +3668,7 @@
         <rect class="cell"
               x="532" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-12:
@@ -3734,7 +3680,7 @@
         <rect class="cell"
               x="544" y="54"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-13:
@@ -3746,7 +3692,7 @@
         <rect class="cell"
               x="544" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-14:
@@ -3758,7 +3704,7 @@
         <rect class="cell"
               x="544" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-15:
@@ -3770,7 +3716,7 @@
         <rect class="cell"
               x="544" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-16:
@@ -3782,7 +3728,7 @@
         <rect class="cell"
               x="544" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-17:
@@ -3794,7 +3740,7 @@
         <rect class="cell"
               x="544" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-18:
@@ -3806,7 +3752,7 @@
         <rect class="cell"
               x="544" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-19:
@@ -3818,7 +3764,7 @@
         <rect class="cell"
               x="556" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-20:
@@ -3830,7 +3776,7 @@
         <rect class="cell"
               x="556" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-21:
@@ -3842,7 +3788,7 @@
         <rect class="cell"
               x="556" y="78"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-22:
@@ -3854,7 +3800,7 @@
         <rect class="cell"
               x="556" y="90"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-23:
@@ -3866,7 +3812,7 @@
         <rect class="cell"
               x="556" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-24:
@@ -3878,7 +3824,7 @@
         <rect class="cell"
               x="556" y="114"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-25:
@@ -3890,7 +3836,7 @@
         <rect class="cell"
               x="556" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-09-26:
@@ -3902,7 +3848,7 @@
         <rect class="cell"
               x="568" y="54"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-27:
@@ -3914,7 +3860,7 @@
         <rect class="cell"
               x="568" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-28:
@@ -3926,7 +3872,7 @@
         <rect class="cell"
               x="568" y="78"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-29:
@@ -3938,7 +3884,7 @@
         <rect class="cell"
               x="568" y="90"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-09-30:
@@ -3950,7 +3896,7 @@
         <rect class="cell"
               x="568" y="102"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-01:
@@ -3962,7 +3908,7 @@
         <rect class="cell"
               x="568" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-02:
@@ -3974,7 +3920,7 @@
         <rect class="cell"
               x="568" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-03:
@@ -3986,7 +3932,7 @@
         <rect class="cell"
               x="580" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-04:
@@ -3998,7 +3944,7 @@
         <rect class="cell"
               x="580" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-05:
@@ -4010,7 +3956,7 @@
         <rect class="cell"
               x="580" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-06:
@@ -4022,7 +3968,7 @@
         <rect class="cell"
               x="580" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-07:
@@ -4034,7 +3980,7 @@
         <rect class="cell"
               x="580" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-08:
@@ -4046,7 +3992,7 @@
         <rect class="cell"
               x="580" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-09:
@@ -4058,7 +4004,7 @@
         <rect class="cell"
               x="580" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-10:
@@ -4070,7 +4016,7 @@
         <rect class="cell"
               x="592" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-11:
@@ -4082,7 +4028,7 @@
         <rect class="cell"
               x="592" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-12:
@@ -4094,7 +4040,7 @@
         <rect class="cell"
               x="592" y="78"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-10-13:
@@ -4106,7 +4052,7 @@
         <rect class="cell"
               x="592" y="90"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-14:
@@ -4118,7 +4064,7 @@
         <rect class="cell"
               x="592" y="102"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-15:
@@ -4130,7 +4076,7 @@
         <rect class="cell"
               x="592" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-16:
@@ -4142,7 +4088,7 @@
         <rect class="cell"
               x="592" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-17:
@@ -4154,7 +4100,7 @@
         <rect class="cell"
               x="604" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-18:
@@ -4166,7 +4112,7 @@
         <rect class="cell"
               x="604" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-10-19:
@@ -4178,7 +4124,7 @@
         <rect class="cell"
               x="604" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-20:
@@ -4190,7 +4136,7 @@
         <rect class="cell"
               x="604" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-21:
@@ -4202,7 +4148,7 @@
         <rect class="cell"
               x="604" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-22:
@@ -4214,7 +4160,7 @@
         <rect class="cell"
               x="604" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-23:
@@ -4226,7 +4172,7 @@
         <rect class="cell"
               x="604" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-24:
@@ -4238,7 +4184,7 @@
         <rect class="cell"
               x="616" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-25:
@@ -4250,7 +4196,7 @@
         <rect class="cell"
               x="616" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-26:
@@ -4262,7 +4208,7 @@
         <rect class="cell"
               x="616" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-27:
@@ -4274,7 +4220,7 @@
         <rect class="cell"
               x="616" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-28:
@@ -4286,7 +4232,7 @@
         <rect class="cell"
               x="616" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-29:
@@ -4298,7 +4244,7 @@
         <rect class="cell"
               x="616" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-30:
@@ -4310,7 +4256,7 @@
         <rect class="cell"
               x="616" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-10-31:
@@ -4322,7 +4268,7 @@
         <rect class="cell"
               x="628" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-01:
@@ -4334,7 +4280,7 @@
         <rect class="cell"
               x="628" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-02:
@@ -4346,7 +4292,7 @@
         <rect class="cell"
               x="628" y="78"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-11-03:
@@ -4358,7 +4304,7 @@
         <rect class="cell"
               x="628" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-04:
@@ -4370,7 +4316,7 @@
         <rect class="cell"
               x="628" y="102"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-05:
@@ -4382,7 +4328,7 @@
         <rect class="cell"
               x="628" y="114"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-06:
@@ -4394,7 +4340,7 @@
         <rect class="cell"
               x="628" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-07:
@@ -4406,7 +4352,7 @@
         <rect class="cell"
               x="640" y="54"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-08:
@@ -4418,7 +4364,7 @@
         <rect class="cell"
               x="640" y="66"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-11-09:
@@ -4430,7 +4376,7 @@
         <rect class="cell"
               x="640" y="78"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-11-10:
@@ -4442,7 +4388,7 @@
         <rect class="cell"
               x="640" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-11:
@@ -4454,7 +4400,7 @@
         <rect class="cell"
               x="640" y="102"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-11-12:
@@ -4466,7 +4412,7 @@
         <rect class="cell"
               x="640" y="114"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-11-13:
@@ -4478,7 +4424,7 @@
         <rect class="cell"
               x="640" y="126"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-14:
@@ -4490,7 +4436,7 @@
         <rect class="cell"
               x="652" y="54"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-11-15:
@@ -4502,7 +4448,7 @@
         <rect class="cell"
               x="652" y="66"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-16:
@@ -4514,7 +4460,7 @@
         <rect class="cell"
               x="652" y="78"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-17:
@@ -4526,7 +4472,7 @@
         <rect class="cell"
               x="652" y="90"
               width="8" height="8"
-              rx="2" fill="#161B22">
+              rx="2" fill="#E5E8DD">
 
             <title>
                 2026-11-18:
@@ -4538,7 +4484,7 @@
         <rect class="cell"
               x="652" y="102"
               width="8" height="8"
-              rx="2" fill="#176B35">
+              rx="2" fill="#83AD8B">
 
             <title>
                 2026-11-19:
@@ -4550,7 +4496,7 @@
         <rect class="cell"
               x="652" y="114"
               width="8" height="8"
-              rx="2" fill="#58A6FF">
+              rx="2" fill="#245744">
 
             <title>
                 2026-11-20:
@@ -4562,7 +4508,7 @@
         <rect class="cell"
               x="652" y="126"
               width="8" height="8"
-              rx="2" fill="#102F1C">
+              rx="2" fill="#C6D8C2">
 
             <title>
                 2026-11-21:
@@ -4572,13 +4518,13 @@
         </rect>
         
 
-    <text x="28" y="165" fill="#8B949E" font-size="9">
+    <text x="28" y="186" fill="#587064" font-size="9">
         Less
     </text>
 
-    <rect x="58" y="157" width="9" height="9" rx="2" fill="#161B22"/><rect x="72" y="157" width="9" height="9" rx="2" fill="#102F1C"/><rect x="86" y="157" width="9" height="9" rx="2" fill="#176B35"/><rect x="100" y="157" width="9" height="9" rx="2" fill="#229B4A"/><rect x="114" y="157" width="9" height="9" rx="2" fill="#58A6FF"/>
+    <rect x="58" y="178" width="9" height="9" rx="2" fill="#E5E8DD"/><rect x="72" y="178" width="9" height="9" rx="2" fill="#C6D8C2"/><rect x="86" y="178" width="9" height="9" rx="2" fill="#83AD8B"/><rect x="100" y="178" width="9" height="9" rx="2" fill="#477D5A"/><rect x="114" y="178" width="9" height="9" rx="2" fill="#245744"/>
 
-    <text x="131" y="165" fill="#8B949E" font-size="9">
+    <text x="131" y="186" fill="#587064" font-size="9">
         More
     </text>
     </g></svg>

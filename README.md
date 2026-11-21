@@ -4,18 +4,15 @@
 
 <p align="center">
   <a href="https://www.kaggle.com/rugvedbane">
-    <img src="cards/02-link-1.svg" width="32.5%" alt="Kaggle">
-  </a>
-  <a href="https://github.com/RugvedBane">
-    <img src="cards/02-link-2.svg" width="32.5%" alt="GitHub">
+    <img src="cards/02-link-1.svg" width="49%" alt="Kaggle">
   </a>
   <a href="https://www.linkedin.com/in/rugvedbane/">
-    <img src="cards/02-link-3.svg" width="32.5%" alt="LinkedIn">
+    <img src="cards/02-link-2.svg" width="49%" alt="LinkedIn">
   </a>
 </p>
 
 <p align="center">
-  <img src="cards/03-activity.svg" width="100%" alt="Activity">
+  <img src="cards/03-activity.svg" width="100%" alt="Contribution Activity">
 </p>
 
 <p align="center">
@@ -31,7 +28,7 @@
 </p>
 
 <p align="center">
-  <img src="cards/04-project-4.svg" width="100%" alt="Student Health Risk Prediction">
+  <img src="cards/04-project-4.svg" width="100%" alt="Student Health Risk Competition">
 </p>
 
 <p align="center">

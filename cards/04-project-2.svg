@@ -19,50 +19,6 @@
             }
 
             
-        .card {
-            animation: enter .85s ease-out 1.1600000000000001s both;
-        }
-
-        .glow {
-            animation: glow 3.5s ease-in-out 1.1600000000000001s infinite alternate;
-        }
-
-        .bar {
-            transform-box: fill-box;
-            transform-origin: bottom;
-            animation: grow .9s ease-out 1.36s both;
-        }
-
-        .cell {
-            animation: appear .5s ease-out 1.1600000000000001s both;
-        }
-
-        @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            from { opacity: .2; }
-            to { opacity: .8; }
-        }
-
-        @keyframes grow {
-            from { transform: scaleY(.02); }
-            to { transform: scaleY(1); }
-        }
-
-        @keyframes appear {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -87,54 +43,44 @@
         </style>
 
         <rect width="100%" height="100%"
-              rx="19" fill="#0D1117"/>
+              rx="19" fill="#F4F1E7"/>
 
         <rect x="1" y="1"
               width="858"
               height="198"
               rx="18"
               fill="none"
-              stroke="#30363D"/>
+              stroke="#CCD5C9"/>
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#58A6FF">
-            <animate
-                attributeName="opacity"
-                values=".3;1;.3"
-                dur="2.8s"
-                begin="1.1600000000000001s"
-                repeatCount="indefinite"
-            />
-        </circle>
-        
     
-        <text x="24" y="30" fill="#58A6FF"
+        <text x="24" y="30" fill="#2F6B4F"
               font-size="9" class="mono">
             FEATURED PROJECT / 02
         </text>
 
-        <text x="24" y="72" fill="#E6EDF3"
+        <text x="24" y="72" fill="#173D32"
               font-size="25" font-weight="750">
             Deepfake Audio Detector
         </text>
 
-        <text x="25" y="98" fill="#58A6FF" font-size="12">
+        <text x="25" y="98" fill="#2F6B4F" font-size="12">
             Synthetic audio detection
         </text>
 
-        <text x="25" y="128" fill="#8B949E" font-size="11">
+        <text x="25" y="128" fill="#587064" font-size="11">
             Machine learning project for detecting deepfake audio.
         </text>
 
         <a href="https://github.com/RugvedBane/deepfake-audio-detector">
-            <text x="25" y="163" fill="#58A6FF"
+            <text x="25" y="163" fill="#2F6B4F"
                   font-size="10" class="mono">
                 SOURCE REPOSITORY ↗
             </text>
         </a>
 
-        <text x="690" y="30" fill="#8B949E"
+        <text x="690" y="30" fill="#587064"
               font-size="9" class="mono">
             MACHINE LEARNING
         </text>
@@ -142,7 +88,7 @@
         
             <a href="https://deepfake-audio-detector-rugved.streamlit.app/">
                 <text x="690" y="162"
-                      fill="#58A6FF" font-size="11">
+                      fill="#2F6B4F" font-size="11">
                     LIVE DEMO ↗
                 </text>
             </a>

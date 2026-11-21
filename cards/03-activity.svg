@@ -2,8 +2,8 @@
     <svg xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          width="860"
-         height="205"
-         viewBox="0 0 860 205">
+         height="250"
+         viewBox="0 0 860 250">
 
         <title>Rugved Bane - GitHub Profile</title>
 
@@ -19,50 +19,6 @@
             }
 
             
-        .card {
-            animation: enter .85s ease-out 0.52s both;
-        }
-
-        .glow {
-            animation: glow 3.5s ease-in-out 0.52s infinite alternate;
-        }
-
-        .bar {
-            transform-box: fill-box;
-            transform-origin: bottom;
-            animation: grow .9s ease-out 0.72s both;
-        }
-
-        .cell {
-            animation: appear .5s ease-out 0.52s both;
-        }
-
-        @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            from { opacity: .2; }
-            to { opacity: .8; }
-        }
-
-        @keyframes grow {
-            from { transform: scaleY(.02); }
-            to { transform: scaleY(1); }
-        }
-
-        @keyframes appear {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -87,204 +43,194 @@
         </style>
 
         <rect width="100%" height="100%"
-              rx="19" fill="#0D1117"/>
+              rx="19" fill="#F4F1E7"/>
 
         <rect x="1" y="1"
               width="858"
-              height="203"
+              height="248"
               rx="18"
               fill="none"
-              stroke="#30363D"/>
+              stroke="#CCD5C9"/>
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#58A6FF">
-            <animate
-                attributeName="opacity"
-                values=".3;1;.3"
-                dur="2.8s"
-                begin="0.52s"
-                repeatCount="indefinite"
-            />
-        </circle>
-        
     
-    <text x="28" y="34" fill="#E6EDF3"
+    <text x="28" y="34" fill="#173D32"
           font-size="19" font-weight="720">
         Contribution activity
     </text>
 
-    <text x="28" y="53" fill="#8B949E" font-size="10">
+    <text x="28" y="53" fill="#587064" font-size="10">
         Monthly contributions · Last 12 months
     </text>
 
-    <text x="28" y="91" fill="#58A6FF"
+    <text x="28" y="91" fill="#2F6B4F"
           font-size="26" font-weight="750">
         145
     </text>
 
-    <text x="29" y="108" fill="#8B949E" font-size="9">
+    <text x="29" y="108" fill="#587064" font-size="9">
         TOTAL CONTRIBUTIONS
     </text>
 
-    <text x="302" y="88" fill="#E6EDF3" font-size="23">
+    <text x="302" y="91" fill="#173D32" font-size="23">
         3
     </text>
 
-    <text x="303" y="105" fill="#8B949E" font-size="9">
+    <text x="303" y="108" fill="#587064" font-size="9">
         DAY STREAK
     </text>
 
-    <text x="452" y="88" fill="#E6EDF3" font-size="23">
+    <text x="452" y="91" fill="#173D32" font-size="23">
         51
     </text>
 
-    <text x="453" y="105" fill="#8B949E" font-size="9">
+    <text x="453" y="108" fill="#587064" font-size="9">
         ACTIVE DAYS
     </text>
 
-    <text x="625" y="88" fill="#E6EDF3" font-size="23">
+    <text x="625" y="91" fill="#173D32" font-size="23">
         12
     </text>
 
-    <text x="626" y="105" fill="#8B949E" font-size="9">
+    <text x="626" y="108" fill="#587064" font-size="9">
         BUSIEST DAY
     </text>
 
-    <text x="626" y="122" fill="#8B949E" font-size="9">
+    <text x="626" y="124" fill="#587064" font-size="9">
         2026-11-20
     </text>
 
     
         <rect class="bar"
-              x="45" y="166"
+              x="45" y="210"
               width="29" height="3"
-              rx="4" fill="#58A6FF"/>
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="59" y="187"
+        <text x="59" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Dec
         </text>
         
         <rect class="bar"
-              x="110" y="166"
+              x="110" y="210"
               width="29" height="3"
-              rx="4" fill="#58A6FF"/>
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="124" y="187"
+        <text x="124" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Jan
         </text>
         
         <rect class="bar"
-              x="175" y="166"
+              x="175" y="210"
               width="29" height="3"
-              rx="4" fill="#58A6FF"/>
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="189" y="187"
+        <text x="189" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Feb
         </text>
         
         <rect class="bar"
-              x="240" y="158"
-              width="29" height="11"
-              rx="4" fill="#58A6FF"/>
+              x="240" y="204"
+              width="29" height="9"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="254" y="187"
+        <text x="254" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Mar
         </text>
         
         <rect class="bar"
-              x="305" y="166"
+              x="305" y="210"
               width="29" height="3"
-              rx="4" fill="#58A6FF"/>
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="319" y="187"
+        <text x="319" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Apr
         </text>
         
         <rect class="bar"
-              x="370" y="160"
-              width="29" height="9"
-              rx="4" fill="#58A6FF"/>
+              x="370" y="206"
+              width="29" height="7"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="384" y="187"
+        <text x="384" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             May
         </text>
         
         <rect class="bar"
-              x="435" y="166"
+              x="435" y="210"
               width="29" height="3"
-              rx="4" fill="#58A6FF"/>
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="449" y="187"
+        <text x="449" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Jun
         </text>
         
         <rect class="bar"
-              x="500" y="132"
-              width="29" height="37"
-              rx="4" fill="#58A6FF"/>
+              x="500" y="184"
+              width="29" height="29"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="514" y="187"
+        <text x="514" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Jul
         </text>
         
         <rect class="bar"
-              x="565" y="102"
-              width="29" height="67"
-              rx="4" fill="#58A6FF"/>
+              x="565" y="160"
+              width="29" height="53"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="579" y="187"
+        <text x="579" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Aug
         </text>
         
         <rect class="bar"
-              x="630" y="100"
-              width="29" height="69"
-              rx="4" fill="#58A6FF"/>
+              x="630" y="158"
+              width="29" height="55"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="644" y="187"
+        <text x="644" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Sep
         </text>
         
         <rect class="bar"
-              x="695" y="132"
-              width="29" height="37"
-              rx="4" fill="#58A6FF"/>
+              x="695" y="184"
+              width="29" height="29"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="709" y="187"
+        <text x="709" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Oct
         </text>
         
         <rect class="bar"
-              x="760" y="87"
-              width="29" height="82"
-              rx="4" fill="#58A6FF"/>
+              x="760" y="148"
+              width="29" height="65"
+              rx="4" fill="#2F6B4F"/>
 
-        <text x="774" y="187"
+        <text x="774" y="238"
               text-anchor="middle"
-              fill="#8B949E" font-size="9">
+              fill="#587064" font-size="9">
             Nov
         </text>
         
