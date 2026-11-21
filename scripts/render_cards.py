@@ -42,7 +42,7 @@ TAGLINE_2 = os.getenv(
 )
 
 # Forest green + warm off-white palette
-ACCENT = os.getenv("BRAND_COLOR", "#2F6B4F")
+ACCENT = "#2F6B4F"
 BG = "#F4F1E7"
 PANEL = "#EAE6D9"
 TEXT = "#173D32"
