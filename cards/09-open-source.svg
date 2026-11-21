@@ -1,0 +1,133 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="860"
+         height="260"
+         viewBox="0 0 860 260">
+
+        <title>Rugved Bane - GitHub Profile</title>
+
+        <style>
+            
+
+            text {
+                font-family: Inter, Arial, sans-serif;
+            }
+
+            .mono {
+                font-family: 'Fira Code', monospace;
+            }
+
+            
+            
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        animate {
+            display: none !important;
+        }
+
+        .card {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .bar {
+            transform: none !important;
+        }
+    }
+    
+        </style>
+
+        <rect width="100%" height="100%"
+              rx="19" fill="#0D1117"/>
+
+        <rect x="1" y="1"
+              width="858"
+              height="258"
+              rx="18"
+              fill="none"
+              stroke="#30363D"/>
+
+        <g class="card">
+            
+    
+    <text x="27" y="31" fill="#E6EDF3"
+          font-size="18" font-weight="720">
+        Open-source contributions
+    </text>
+
+    <text x="817" y="31" text-anchor="end"
+          fill="#8B949E" font-size="9" class="mono">
+        3 MERGED · 1 OPEN
+    </text>
+
+    
+        <text x="27" y="63" fill="#E6EDF3"
+              font-size="13">
+            scikit-learn/scikit-learn
+        </text>
+
+        <text x="27" y="79" fill="#8B949E"
+              font-size="10">
+            RFECV per-split ranking and support shapes · PR #35174
+        </text>
+
+        <text x="817" y="68" text-anchor="end"
+              fill="#3FB950" font-size="9"
+              class="mono" font-weight="700">
+            MERGED
+        </text>
+        
+        <text x="27" y="111" fill="#E6EDF3"
+              font-size="13">
+            scikit-learn/scikit-learn
+        </text>
+
+        <text x="27" y="127" fill="#8B949E"
+              font-size="10">
+            HistGradientBoosting early-stopping fix · PR #35176
+        </text>
+
+        <text x="817" y="116" text-anchor="end"
+              fill="#3FB950" font-size="9"
+              class="mono" font-weight="700">
+            MERGED
+        </text>
+        
+        <text x="27" y="159" fill="#E6EDF3"
+              font-size="13">
+            feature-engine/feature_engine
+        </text>
+
+        <text x="27" y="175" fill="#8B949E"
+              font-size="10">
+            Feature-engine contribution · PR #1120
+        </text>
+
+        <text x="817" y="164" text-anchor="end"
+              fill="#D29922" font-size="9"
+              class="mono" font-weight="700">
+            OPEN
+        </text>
+        
+        <text x="27" y="207" fill="#E6EDF3"
+              font-size="13">
+            philpaz/recusal
+        </text>
+
+        <text x="27" y="223" fill="#8B949E"
+              font-size="10">
+            Validation helper + 14 tests · PR #63
+        </text>
+
+        <text x="817" y="212" text-anchor="end"
+              fill="#3FB950" font-size="9"
+              class="mono" font-weight="700">
+            MERGED
+        </text>
+        
+    </g></svg>

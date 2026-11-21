@@ -1,0 +1,138 @@
+name: Refresh Animated Profile Cards
+
+on:
+  schedule:
+    - cron: "17 0 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+      - main
+      - master
+    paths:
+      - "scripts/**"
+      - "data/**"
+      - ".github/workflows/profile-cards.yml"
+
+permissions:
+  contents: write
+
+jobs:
+  render:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-inter fonts-firacode fontconfig
+          pip install fonttools brotli
+
+      - name: Fetch GitHub contributions
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USER: ${{ github.repository_owner }}
+        run: |
+          gh api graphql \
+            -f query='query($login: String!) {
+              user(login: $login) {
+                contributionsCollection {
+                  contributionCalendar {
+                    totalContributions
+                    weeks {
+                      contributionDays {
+                        date
+                        contributionCount
+                        contributionLevel
+                      }
+                    }
+                  }
+                }
+              }
+            }' \
+            -f login="$GH_USER" > /tmp/contributions.json
+
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          raw = json.loads(
+              Path("/tmp/contributions.json").read_text()
+          )
+
+          if raw.get("errors") or not raw.get("data", {}).get("user"):
+              raise SystemExit(f"GitHub API error: {raw.get('errors')}")
+
+          calendar = raw["data"]["user"][
+              "contributionsCollection"
+          ]["contributionCalendar"]
+
+          levels = {
+              "NONE": 0,
+              "FIRST_QUARTILE": 1,
+              "SECOND_QUARTILE": 2,
+              "THIRD_QUARTILE": 3,
+              "FOURTH_QUARTILE": 4
+          }
+
+          days = []
+
+          for week in calendar["weeks"]:
+              for day in week["contributionDays"]:
+                  days.append({
+                      "date": day["date"],
+                      "count": day["contributionCount"],
+                      "level": levels.get(
+                          day["contributionLevel"], 0
+                      )
+                  })
+
+          Path("data/contributions.json").write_text(
+              json.dumps({
+                  "total_contributions": calendar["totalContributions"],
+                  "days": days
+              }, indent=2) + "\n"
+          )
+          PY
+
+      - name: Prepare fonts
+        run: |
+          mkdir -p assets
+
+          INTER=$(fc-match -f '%{file}' Inter | head -n1)
+          FIRA=$(fc-match -f '%{file}' "Fira Code" | head -n1)
+
+          cp "$INTER" assets/Inter.ttf
+          cp "$FIRA" assets/FiraCode.ttf
+
+      - name: Render SVG cards
+        env:
+          GITHUB_USERNAME: ${{ github.repository_owner }}
+          PROFILE_NAME: "Rugved Bane"
+          PROFILE_TAGLINE: "CS Student · ML Engineer · Kaggle Competitor · Open Source Contributor"
+          BRAND_COLOR: "#58A6FF"
+        run: |
+          python scripts/render_cards.py
+
+      - name: Commit generated cards
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add data/contributions.json
+          git add assets/*.ttf
+          git add cards/*.svg
+
+          if ! git diff --cached --quiet; then
+            git commit -m "chore: refresh animated profile cards"
+            git push
+          fi

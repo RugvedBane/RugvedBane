@@ -1,0 +1,753 @@
+#!/usr/bin/env python3
+"""Generate animated SVG cards for a GitHub profile README.
+
+Usage:
+    python scripts/render_cards.py
+    STATIC=1 python scripts/render_cards.py
+"""
+
+import os
+import json
+import html
+import base64
+import calendar
+import shutil
+import subprocess
+
+from pathlib import Path
+from datetime import date, timedelta
+
+ROOT = Path(__file__).resolve().parents[1]
+OUT = ROOT / "cards"
+DATA = ROOT / "data" / "contributions.json"
+
+USERNAME = os.getenv("GITHUB_USERNAME", "RugvedBane")
+NAME = os.getenv("PROFILE_NAME", "Rugved Bane")
+TAGLINE = os.getenv(
+    "PROFILE_TAGLINE",
+    "CS Student · ML Engineer · Kaggle Competitor · Open Source Contributor"
+)
+
+ACCENT = os.getenv("BRAND_COLOR", "#58A6FF")
+BG = "#0D1117"
+PANEL = "#161B22"
+TEXT = "#E6EDF3"
+MUTED = "#8B949E"
+BORDER = "#30363D"
+
+STATIC = os.getenv("STATIC", "0") == "1"
+
+# Featured repositories
+PROJECTS = [
+    {
+        "name": "Kwest",
+        "subtitle": "AI-powered Kaggle workspace",
+        "description": (
+            "Eight tools for Kaggle workflows, "
+            "experiment memory and code visibility."
+        ),
+        "repo": f"https://github.com/{USERNAME}/Kwest",
+        "demo": "",
+        "tag": "FLAGSHIP"
+    },
+    {
+        "name": "Deepfake Audio Detector",
+        "subtitle": "Synthetic audio detection",
+        "description": (
+            "Machine learning project for "
+            "detecting deepfake audio."
+        ),
+        "repo": f"https://github.com/{USERNAME}/deepfake-audio-detector",
+        "demo": "https://deepfake-audio-detector-rugved.streamlit.app/",
+        "tag": "MACHINE LEARNING"
+    },
+    {
+        "name": "UFC Fight Predictor",
+        "subtitle": "Sports prediction · ML",
+        "description": (
+            "Data-driven modelling for predicting "
+            "UFC fight outcomes."
+        ),
+        "repo": f"https://github.com/{USERNAME}/UFC-Predictor",
+        "demo": "https://ufc-predictor-rugvedbane.streamlit.app/",
+        "tag": "MACHINE LEARNING"
+    },
+    {
+        "name": "Student Health Risk Prediction",
+        "subtitle": "Kaggle competition",
+        "description": "LightGBM + Optuna modelling workflow.",
+        "repo": f"https://github.com/{USERNAME}/Student-Health-Risk-PS-S6E7",
+        "demo": "https://www.kaggle.com/code/rugvedbane/student-health-risk-lightgbm-optuna-0-95014",
+        "tag": "KAGGLE"
+    },
+    {
+        "name": "Netflix Data Analysis",
+        "subtitle": "Exploratory data analysis",
+        "description": "Exploration and analysis of Netflix data.",
+        "repo": f"https://github.com/{USERNAME}/Netflix-data-Analysis",
+        "demo": "https://www.kaggle.com/code/rugvedbane/netflix-data-analysis",
+        "tag": "DATA SCIENCE"
+    }
+]
+
+
+def esc(value):
+    return html.escape(str(value), quote=True)
+
+
+def load_data():
+    if not DATA.exists():
+        return {"total_contributions": 0, "days": []}
+
+    with open(DATA, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def calculate_stats(data):
+    counts = {}
+
+    for item in data.get("days", []):
+        try:
+            d = date.fromisoformat(item["date"])
+            counts[d] = int(item.get("count", 0))
+        except (KeyError, ValueError, TypeError):
+            continue
+
+    today = date.today()
+
+    # Current streak, allowing yesterday as the starting point
+    cursor = today if counts.get(today, 0) else today - timedelta(days=1)
+
+    streak = 0
+    while counts.get(cursor, 0) > 0:
+        streak += 1
+        cursor -= timedelta(days=1)
+
+    # Monthly contributions over the last 12 months
+    months = []
+
+    for offset in range(11, -1, -1):
+        year = today.year
+        month = today.month - offset
+
+        while month <= 0:
+            year -= 1
+            month += 12
+
+        total = sum(
+            value for d, value in counts.items()
+            if d.year == year and d.month == month
+        )
+
+        months.append((calendar.month_abbr[month], total))
+
+    busiest, peak = max(
+        counts.items(),
+        key=lambda item: item[1],
+        default=(None, 0)
+    )
+
+    return {
+        "total": int(
+            data.get("total_contributions", sum(counts.values()))
+        ),
+        "active": sum(v > 0 for v in counts.values()),
+        "streak": streak,
+        "busiest_date": busiest.isoformat() if busiest else "—",
+        "busiest_count": peak,
+        "months": months,
+        "days": data.get("days", [])[-371:]
+    }
+
+
+def load_fonts():
+    """Subset TTF files into WOFF and embed them as base64."""
+
+    result = []
+
+    for font in ("Inter", "FiraCode"):
+        source = ROOT / "assets" / f"{font}.ttf"
+        output = ROOT / "assets" / f"{font}.woff"
+
+        uri = ""
+
+        if source.exists() and shutil.which("pyftsubset"):
+            subprocess.run([
+                "pyftsubset",
+                str(source),
+                f"--output-file={output}",
+                "--flavor=woff",
+                "--unicodes=U+0000-00FF,U+2000-206F",
+                "--layout-features=*"
+            ], check=True)
+
+            uri = (
+                "data:font/woff;base64,"
+                + base64.b64encode(output.read_bytes()).decode()
+            )
+
+        elif output.exists():
+            uri = (
+                "data:font/woff;base64,"
+                + base64.b64encode(output.read_bytes()).decode()
+            )
+
+        result.append(uri)
+
+    return result
+
+
+def svg_start(width, height, delay, font_data):
+    inter, fira = font_data
+
+    font_css = ""
+
+    if inter:
+        font_css += (
+            f"@font-face{{font-family:Inter;"
+            f"src:url('{inter}') format('woff')}}"
+        )
+
+    if fira:
+        font_css += (
+            f"@font-face{{font-family:'Fira Code';"
+            f"src:url('{fira}') format('woff')}}"
+        )
+
+    animation_css = ""
+
+    if not STATIC:
+        animation_css = f"""
+        .card {{
+            animation: enter .85s ease-out {delay}s both;
+        }}
+
+        .glow {{
+            animation: glow 3.5s ease-in-out {delay}s infinite alternate;
+        }}
+
+        .bar {{
+            transform-box: fill-box;
+            transform-origin: bottom;
+            animation: grow .9s ease-out {delay + .2}s both;
+        }}
+
+        .cell {{
+            animation: appear .5s ease-out {delay}s both;
+        }}
+
+        @keyframes enter {{
+            from {{
+                opacity: 0;
+                transform: translateY(18px);
+            }}
+            to {{
+                opacity: 1;
+                transform: translateY(0);
+            }}
+        }}
+
+        @keyframes glow {{
+            from {{ opacity: .2; }}
+            to {{ opacity: .8; }}
+        }}
+
+        @keyframes grow {{
+            from {{ transform: scaleY(.02); }}
+            to {{ transform: scaleY(1); }}
+        }}
+
+        @keyframes appear {{
+            from {{ opacity: 0; }}
+            to {{ opacity: 1; }}
+        }}
+        """
+
+    reduced_motion = """
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        animate {
+            display: none !important;
+        }
+
+        .card {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .bar {
+            transform: none !important;
+        }
+    }
+    """
+
+    smil = ""
+
+    if not STATIC:
+        smil = f"""
+        <circle cx="{width - 28}" cy="26" r="3" fill="{ACCENT}">
+            <animate
+                attributeName="opacity"
+                values=".3;1;.3"
+                dur="2.8s"
+                begin="{delay}s"
+                repeatCount="indefinite"
+            />
+        </circle>
+        """
+
+    return f"""
+    <svg xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="{width}"
+         height="{height}"
+         viewBox="0 0 {width} {height}">
+
+        <title>Rugved Bane - GitHub Profile</title>
+
+        <style>
+            {font_css}
+
+            text {{
+                font-family: Inter, Arial, sans-serif;
+            }}
+
+            .mono {{
+                font-family: 'Fira Code', monospace;
+            }}
+
+            {animation_css}
+            {reduced_motion}
+        </style>
+
+        <rect width="100%" height="100%"
+              rx="19" fill="{BG}"/>
+
+        <rect x="1" y="1"
+              width="{width - 2}"
+              height="{height - 2}"
+              rx="18"
+              fill="none"
+              stroke="{BORDER}"/>
+
+        <g class="card">
+            {smil}
+    """
+
+
+def save_card(filename, body, width, height, delay, fonts):
+    OUT.mkdir(parents=True, exist_ok=True)
+
+    content = (
+        svg_start(width, height, delay, fonts)
+        + body
+        + "</g></svg>"
+    )
+
+    (OUT / filename).write_text(content, encoding="utf-8")
+
+
+def hero(fonts):
+    portrait_url = os.getenv("PORTRAIT_URL", "")
+
+    portrait = ""
+
+    if portrait_url:
+        portrait = f"""
+        <defs>
+            <clipPath id="portrait">
+                <circle cx="790" cy="91" r="48"/>
+            </clipPath>
+        </defs>
+
+        <image
+            href="{esc(portrait_url)}"
+            xlink:href="{esc(portrait_url)}"
+            x="742" y="43"
+            width="96" height="96"
+            preserveAspectRatio="xMidYMid slice"
+            clip-path="url(#portrait)"
+        />
+
+        <circle cx="790" cy="91" r="49"
+                fill="none" stroke="{ACCENT}" stroke-width="2"/>
+        """
+
+    body = f"""
+    <defs>
+        <linearGradient id="shine">
+            <stop stop-color="{ACCENT}" stop-opacity=".25"/>
+            <stop offset="1" stop-color="{ACCENT}" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+
+    <rect x="2" y="2" width="856" height="176"
+          rx="17" fill="url(#shine)" class="glow"/>
+
+    <text x="34" y="43" fill="{ACCENT}"
+          font-size="11" letter-spacing="3" class="mono">
+        HELLO, WORLD — I'M
+    </text>
+
+    <text x="34" y="99" fill="{TEXT}"
+          font-size="43" font-weight="750">
+        {esc(NAME)}
+    </text>
+
+    <text x="36" y="132" fill="{MUTED}" font-size="15">
+        {esc(TAGLINE)}
+    </text>
+
+    <text x="36" y="160" fill="{ACCENT}"
+          font-size="11" class="mono">
+        github.com/{esc(USERNAME)}
+    </text>
+
+    {portrait}
+    """
+
+    save_card("01-hero.svg", body, 860, 180, 0, fonts)
+
+
+def link_tiles(fonts):
+    links = [
+        ("KAGGLE", "Competitions & notebooks",
+         "https://www.kaggle.com/rugvedbane"),
+        ("GITHUB", "Projects & contributions",
+         f"https://github.com/{USERNAME}"),
+        ("LINKEDIN", "Connect professionally",
+         "https://www.linkedin.com/in/rugvedbane/")
+    ]
+
+    for i, (title, subtitle, url) in enumerate(links, 1):
+        body = f"""
+        <text x="20" y="28" fill="{ACCENT}"
+              font-size="9" class="mono">
+            0{i} / PROFILE
+        </text>
+
+        <text x="20" y="63" fill="{TEXT}"
+              font-size="20" font-weight="720">
+            {esc(title)}
+        </text>
+
+        <text x="20" y="87" fill="{MUTED}" font-size="10">
+            {esc(subtitle)}
+        </text>
+
+        <text x="20" y="112" fill="{ACCENT}" font-size="10">
+            OPEN ↗
+        </text>
+
+        <a href="{esc(url)}">
+            <rect x="1" y="1" width="278" height="128"
+                  fill="transparent"/>
+        </a>
+        """
+
+        save_card(
+            f"02-link-{i}.svg",
+            body,
+            280,
+            130,
+            .2 + i * .08,
+            fonts
+        )
+
+
+def activity_card(stats, fonts):
+    max_value = max(
+        (v for _, v in stats["months"]),
+        default=1
+    ) or 1
+
+    bars = []
+
+    for i, (month, value) in enumerate(stats["months"]):
+        x = 45 + i * 65
+        height = max(3, round(82 * value / max_value))
+        y = 169 - height
+
+        bars.append(f"""
+        <rect class="bar"
+              x="{x}" y="{y}"
+              width="29" height="{height}"
+              rx="4" fill="{ACCENT}"/>
+
+        <text x="{x + 14}" y="187"
+              text-anchor="middle"
+              fill="{MUTED}" font-size="9">
+            {month}
+        </text>
+        """)
+
+    body = f"""
+    <text x="28" y="34" fill="{TEXT}"
+          font-size="19" font-weight="720">
+        Contribution activity
+    </text>
+
+    <text x="28" y="53" fill="{MUTED}" font-size="10">
+        Monthly contributions · Last 12 months
+    </text>
+
+    <text x="28" y="91" fill="{ACCENT}"
+          font-size="26" font-weight="750">
+        {stats['total']:,}
+    </text>
+
+    <text x="29" y="108" fill="{MUTED}" font-size="9">
+        TOTAL CONTRIBUTIONS
+    </text>
+
+    <text x="302" y="88" fill="{TEXT}" font-size="23">
+        {stats['streak']}
+    </text>
+
+    <text x="303" y="105" fill="{MUTED}" font-size="9">
+        DAY STREAK
+    </text>
+
+    <text x="452" y="88" fill="{TEXT}" font-size="23">
+        {stats['active']}
+    </text>
+
+    <text x="453" y="105" fill="{MUTED}" font-size="9">
+        ACTIVE DAYS
+    </text>
+
+    <text x="625" y="88" fill="{TEXT}" font-size="23">
+        {stats['busiest_count']}
+    </text>
+
+    <text x="626" y="105" fill="{MUTED}" font-size="9">
+        BUSIEST DAY
+    </text>
+
+    <text x="626" y="122" fill="{MUTED}" font-size="9">
+        {esc(stats['busiest_date'])}
+    </text>
+
+    {''.join(bars)}
+    """
+
+    save_card("03-activity.svg", body, 860, 205, .52, fonts)
+
+
+def project_cards(fonts):
+    for i, project in enumerate(PROJECTS, 1):
+        demo = ""
+
+        if project["demo"]:
+            demo = f"""
+            <a href="{esc(project['demo'])}">
+                <text x="690" y="162"
+                      fill="{ACCENT}" font-size="11">
+                    LIVE DEMO ↗
+                </text>
+            </a>
+            """
+
+        body = f"""
+        <text x="24" y="30" fill="{ACCENT}"
+              font-size="9" class="mono">
+            FEATURED PROJECT / {i:02d}
+        </text>
+
+        <text x="24" y="72" fill="{TEXT}"
+              font-size="25" font-weight="750">
+            {esc(project['name'])}
+        </text>
+
+        <text x="25" y="98" fill="{ACCENT}" font-size="12">
+            {esc(project['subtitle'])}
+        </text>
+
+        <text x="25" y="128" fill="{MUTED}" font-size="11">
+            {esc(project['description'])}
+        </text>
+
+        <a href="{esc(project['repo'])}">
+            <text x="25" y="163" fill="{ACCENT}"
+                  font-size="10" class="mono">
+                SOURCE REPOSITORY ↗
+            </text>
+        </a>
+
+        <text x="690" y="30" fill="{MUTED}"
+              font-size="9" class="mono">
+            {esc(project['tag'])}
+        </text>
+
+        {demo}
+        """
+
+        save_card(
+            f"04-project-{i}.svg",
+            body,
+            860,
+            200,
+            .8 + i * .18,
+            fonts
+        )
+
+
+def open_source_card(fonts):
+    prs = [
+        (
+            "scikit-learn/scikit-learn",
+            "RFECV per-split ranking and support shapes · PR #35174",
+            "MERGED"
+        ),
+        (
+            "scikit-learn/scikit-learn",
+            "HistGradientBoosting early-stopping fix · PR #35176",
+            "MERGED"
+        ),
+        (
+            "feature-engine/feature_engine",
+            "Feature-engine contribution · PR #1120",
+            "OPEN"
+        ),
+        (
+            "philpaz/recusal",
+            "Validation helper + 14 tests · PR #63",
+            "MERGED"
+        )
+    ]
+
+    rows = []
+
+    for i, (repo, description, status) in enumerate(prs):
+        y = 63 + i * 48
+
+        status_color = (
+            "#3FB950" if status == "MERGED"
+            else "#D29922"
+        )
+
+        rows.append(f"""
+        <text x="27" y="{y}" fill="{TEXT}"
+              font-size="13">
+            {esc(repo)}
+        </text>
+
+        <text x="27" y="{y + 16}" fill="{MUTED}"
+              font-size="10">
+            {esc(description)}
+        </text>
+
+        <text x="817" y="{y + 5}" text-anchor="end"
+              fill="{status_color}" font-size="9"
+              class="mono" font-weight="700">
+            {esc(status)}
+        </text>
+        """)
+
+    body = f"""
+    <text x="27" y="31" fill="{TEXT}"
+          font-size="18" font-weight="720">
+        Open-source contributions
+    </text>
+
+    <text x="817" y="31" text-anchor="end"
+          fill="{MUTED}" font-size="9" class="mono">
+        3 MERGED · 1 OPEN
+    </text>
+
+    {''.join(rows)}
+    """
+
+    save_card("09-open-source.svg", body, 860, 260, 1.8, fonts)
+
+
+def contribution_graph(stats, fonts):
+    colors = [
+        "#161B22",
+        "#102F1C",
+        "#176B35",
+        "#229B4A",
+        ACCENT
+    ]
+
+    cells = []
+
+    for i, day in enumerate(stats["days"]):
+        col, row = divmod(i, 7)
+
+        x = 28 + col * 12
+        y = 54 + row * 12
+
+        level = max(0, min(4, int(day.get("level", 0))))
+
+        cells.append(f"""
+        <rect class="cell"
+              x="{x}" y="{y}"
+              width="8" height="8"
+              rx="2" fill="{colors[level]}">
+
+            <title>
+                {esc(day.get('date', ''))}:
+                {int(day.get('count', 0))} contributions
+            </title>
+
+        </rect>
+        """)
+
+    legend = "".join(
+        f'<rect x="{58+i*14}" y="157" width="9" height="9" '
+        f'rx="2" fill="{color}"/>'
+        for i, color in enumerate(colors)
+    )
+
+    body = f"""
+    <text x="28" y="29" fill="{TEXT}"
+          font-size="18" font-weight="720">
+        Contribution graph
+    </text>
+
+    <text x="28" y="44" fill="{MUTED}" font-size="9">
+        Past year · Contribution intensity in brand blue
+    </text>
+
+    {''.join(cells)}
+
+    <text x="28" y="165" fill="{MUTED}" font-size="9">
+        Less
+    </text>
+
+    {legend}
+
+    <text x="131" y="165" fill="{MUTED}" font-size="9">
+        More
+    </text>
+    """
+
+    save_card("10-contributions.svg", body, 860, 185, 2.25, fonts)
+
+
+def main():
+    OUT.mkdir(parents=True, exist_ok=True)
+
+    data = load_data()
+    stats = calculate_stats(data)
+    font_data = load_fonts()
+
+    hero(font_data)
+    link_tiles(font_data)
+    activity_card(stats, font_data)
+    project_cards(font_data)
+    open_source_card(font_data)
+    contribution_graph(stats, font_data)
+
+    print(
+        f"Generated {len(list(OUT.glob('*.svg')))} SVG cards."
+    )
+
+
+if __name__ == "__main__":
+    main()

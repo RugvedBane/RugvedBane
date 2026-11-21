@@ -1,0 +1,88 @@
+
+    <svg xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink"
+         width="860"
+         height="180"
+         viewBox="0 0 860 180">
+
+        <title>Rugved Bane - GitHub Profile</title>
+
+        <style>
+            
+
+            text {
+                font-family: Inter, Arial, sans-serif;
+            }
+
+            .mono {
+                font-family: 'Fira Code', monospace;
+            }
+
+            
+            
+    @media (prefers-reduced-motion: reduce) {
+        *, *::before, *::after {
+            animation: none !important;
+            transition: none !important;
+        }
+
+        animate {
+            display: none !important;
+        }
+
+        .card {
+            opacity: 1 !important;
+            transform: none !important;
+        }
+
+        .bar {
+            transform: none !important;
+        }
+    }
+    
+        </style>
+
+        <rect width="100%" height="100%"
+              rx="19" fill="#0D1117"/>
+
+        <rect x="1" y="1"
+              width="858"
+              height="178"
+              rx="18"
+              fill="none"
+              stroke="#30363D"/>
+
+        <g class="card">
+            
+    
+    <defs>
+        <linearGradient id="shine">
+            <stop stop-color="#58A6FF" stop-opacity=".25"/>
+            <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+        </linearGradient>
+    </defs>
+
+    <rect x="2" y="2" width="856" height="176"
+          rx="17" fill="url(#shine)" class="glow"/>
+
+    <text x="34" y="43" fill="#58A6FF"
+          font-size="11" letter-spacing="3" class="mono">
+        HELLO, WORLD — I'M
+    </text>
+
+    <text x="34" y="99" fill="#E6EDF3"
+          font-size="43" font-weight="750">
+        Rugved Bane
+    </text>
+
+    <text x="36" y="132" fill="#8B949E" font-size="15">
+        CS Student · ML Engineer · Kaggle Competitor · Open Source Contributor
+    </text>
+
+    <text x="36" y="160" fill="#58A6FF"
+          font-size="11" class="mono">
+        github.com/RugvedBane
+    </text>
+
+    
+    </g></svg>
