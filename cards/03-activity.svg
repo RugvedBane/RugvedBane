@@ -120,7 +120,7 @@
 
     <text x="28" y="91" fill="#2F6B4F"
           font-size="26" font-weight="750">
-        152
+        156
     </text>
 
     <text x="29" y="108" fill="#587064" font-size="9">
@@ -144,7 +144,7 @@
     </text>
 
     <text x="625" y="91" fill="#173D32" font-size="23">
-        12
+        14
     </text>
 
     <text x="626" y="108" fill="#587064" font-size="9">
@@ -152,7 +152,7 @@
     </text>
 
     <text x="626" y="124" fill="#587064" font-size="9">
-        2026-11-20
+        2026-11-21
     </text>
 
     
@@ -212,8 +212,8 @@
         </text>
         
         <rect class="bar"
-              x="370" y="207"
-              width="29" height="6"
+              x="370" y="208"
+              width="29" height="5"
               rx="4" fill="#2F6B4F"/>
 
         <text x="384" y="238"
@@ -234,8 +234,8 @@
         </text>
         
         <rect class="bar"
-              x="500" y="188"
-              width="29" height="25"
+              x="500" y="190"
+              width="29" height="23"
               rx="4" fill="#2F6B4F"/>
 
         <text x="514" y="238"
@@ -245,8 +245,8 @@
         </text>
         
         <rect class="bar"
-              x="565" y="168"
-              width="29" height="45"
+              x="565" y="172"
+              width="29" height="41"
               rx="4" fill="#2F6B4F"/>
 
         <text x="579" y="238"
@@ -256,8 +256,8 @@
         </text>
         
         <rect class="bar"
-              x="630" y="167"
-              width="29" height="46"
+              x="630" y="171"
+              width="29" height="42"
               rx="4" fill="#2F6B4F"/>
 
         <text x="644" y="238"
@@ -267,8 +267,8 @@
         </text>
         
         <rect class="bar"
-              x="695" y="188"
-              width="29" height="25"
+              x="695" y="190"
+              width="29" height="23"
               rx="4" fill="#2F6B4F"/>
 
         <text x="709" y="238"
