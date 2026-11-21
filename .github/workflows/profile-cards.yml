@@ -118,8 +118,6 @@ jobs:
         env:
           GITHUB_USERNAME: ${{ github.repository_owner }}
           PROFILE_NAME: "Rugved Bane"
-          PROFILE_TAGLINE: "CS Student · ML Engineer · Kaggle Competitor · Open Source Contributor"
-          BRAND_COLOR: "#58A6FF"
         run: |
           python scripts/render_cards.py
 
