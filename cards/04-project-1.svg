@@ -19,50 +19,6 @@
             }
 
             
-        .card {
-            animation: enter .85s ease-out 0.98s both;
-        }
-
-        .glow {
-            animation: glow 3.5s ease-in-out 0.98s infinite alternate;
-        }
-
-        .bar {
-            transform-box: fill-box;
-            transform-origin: bottom;
-            animation: grow .9s ease-out 1.18s both;
-        }
-
-        .cell {
-            animation: appear .5s ease-out 0.98s both;
-        }
-
-        @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes glow {
-            from { opacity: .2; }
-            to { opacity: .8; }
-        }
-
-        @keyframes grow {
-            from { transform: scaleY(.02); }
-            to { transform: scaleY(1); }
-        }
-
-        @keyframes appear {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -98,16 +54,6 @@
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#2F6B4F">
-            <animate
-                attributeName="opacity"
-                values=".3;1;.3"
-                dur="2.8s"
-                begin="0.98s"
-                repeatCount="indefinite"
-            />
-        </circle>
-        
     
         <text x="24" y="30" fill="#2F6B4F"
               font-size="9" class="mono">
