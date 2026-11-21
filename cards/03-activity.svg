@@ -19,6 +19,50 @@
             }
 
             
+        .card {
+            animation: enter .85s ease-out 0.52s both;
+        }
+
+        .glow {
+            animation: glow 3.5s ease-in-out 0.52s infinite alternate;
+        }
+
+        .bar {
+            transform-box: fill-box;
+            transform-origin: bottom;
+            animation: grow .9s ease-out 0.72s both;
+        }
+
+        .cell {
+            animation: appear .5s ease-out 0.52s both;
+        }
+
+        @keyframes enter {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from { opacity: .2; }
+            to { opacity: .8; }
+        }
+
+        @keyframes grow {
+            from { transform: scaleY(.02); }
+            to { transform: scaleY(1); }
+        }
+
+        @keyframes appear {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -54,6 +98,16 @@
 
         <g class="card">
             
+        <circle cx="832" cy="26" r="3" fill="#58A6FF">
+            <animate
+                attributeName="opacity"
+                values=".3;1;.3"
+                dur="2.8s"
+                begin="0.52s"
+                repeatCount="indefinite"
+            />
+        </circle>
+        
     
     <text x="28" y="34" fill="#173D32"
           font-size="19" font-weight="720">
@@ -64,9 +118,9 @@
         Monthly contributions · Last 12 months
     </text>
 
-    <text x="28" y="91" fill="#2F6B4F"
+    <text x="28" y="91" fill="#58A6FF"
           font-size="26" font-weight="750">
-        145
+        146
     </text>
 
     <text x="29" y="108" fill="#587064" font-size="9">
@@ -105,7 +159,7 @@
         <rect class="bar"
               x="45" y="210"
               width="29" height="3"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="59" y="238"
               text-anchor="middle"
@@ -116,7 +170,7 @@
         <rect class="bar"
               x="110" y="210"
               width="29" height="3"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="124" y="238"
               text-anchor="middle"
@@ -127,7 +181,7 @@
         <rect class="bar"
               x="175" y="210"
               width="29" height="3"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="189" y="238"
               text-anchor="middle"
@@ -136,9 +190,9 @@
         </text>
         
         <rect class="bar"
-              x="240" y="204"
-              width="29" height="9"
-              rx="4" fill="#2F6B4F"/>
+              x="240" y="205"
+              width="29" height="8"
+              rx="4" fill="#58A6FF"/>
 
         <text x="254" y="238"
               text-anchor="middle"
@@ -149,7 +203,7 @@
         <rect class="bar"
               x="305" y="210"
               width="29" height="3"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="319" y="238"
               text-anchor="middle"
@@ -160,7 +214,7 @@
         <rect class="bar"
               x="370" y="206"
               width="29" height="7"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="384" y="238"
               text-anchor="middle"
@@ -171,7 +225,7 @@
         <rect class="bar"
               x="435" y="210"
               width="29" height="3"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="449" y="238"
               text-anchor="middle"
@@ -180,9 +234,9 @@
         </text>
         
         <rect class="bar"
-              x="500" y="184"
-              width="29" height="29"
-              rx="4" fill="#2F6B4F"/>
+              x="500" y="185"
+              width="29" height="28"
+              rx="4" fill="#58A6FF"/>
 
         <text x="514" y="238"
               text-anchor="middle"
@@ -191,9 +245,9 @@
         </text>
         
         <rect class="bar"
-              x="565" y="160"
-              width="29" height="53"
-              rx="4" fill="#2F6B4F"/>
+              x="565" y="161"
+              width="29" height="52"
+              rx="4" fill="#58A6FF"/>
 
         <text x="579" y="238"
               text-anchor="middle"
@@ -202,9 +256,9 @@
         </text>
         
         <rect class="bar"
-              x="630" y="158"
-              width="29" height="55"
-              rx="4" fill="#2F6B4F"/>
+              x="630" y="160"
+              width="29" height="53"
+              rx="4" fill="#58A6FF"/>
 
         <text x="644" y="238"
               text-anchor="middle"
@@ -213,9 +267,9 @@
         </text>
         
         <rect class="bar"
-              x="695" y="184"
-              width="29" height="29"
-              rx="4" fill="#2F6B4F"/>
+              x="695" y="185"
+              width="29" height="28"
+              rx="4" fill="#58A6FF"/>
 
         <text x="709" y="238"
               text-anchor="middle"
@@ -226,7 +280,7 @@
         <rect class="bar"
               x="760" y="148"
               width="29" height="65"
-              rx="4" fill="#2F6B4F"/>
+              rx="4" fill="#58A6FF"/>
 
         <text x="774" y="238"
               text-anchor="middle"

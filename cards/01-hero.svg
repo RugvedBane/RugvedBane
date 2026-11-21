@@ -19,6 +19,50 @@
             }
 
             
+        .card {
+            animation: enter .85s ease-out 0s both;
+        }
+
+        .glow {
+            animation: glow 3.5s ease-in-out 0s infinite alternate;
+        }
+
+        .bar {
+            transform-box: fill-box;
+            transform-origin: bottom;
+            animation: grow .9s ease-out 0.2s both;
+        }
+
+        .cell {
+            animation: appear .5s ease-out 0s both;
+        }
+
+        @keyframes enter {
+            from {
+                opacity: 0;
+                transform: translateY(18px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes glow {
+            from { opacity: .2; }
+            to { opacity: .8; }
+        }
+
+        @keyframes grow {
+            from { transform: scaleY(.02); }
+            to { transform: scaleY(1); }
+        }
+
+        @keyframes appear {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
             
     @media (prefers-reduced-motion: reduce) {
         *, *::before, *::after {
@@ -54,11 +98,21 @@
 
         <g class="card">
             
+        <circle cx="832" cy="26" r="3" fill="#58A6FF">
+            <animate
+                attributeName="opacity"
+                values=".3;1;.3"
+                dur="2.8s"
+                begin="0s"
+                repeatCount="indefinite"
+            />
+        </circle>
+        
     
     <defs>
         <linearGradient id="shine">
-            <stop stop-color="#2F6B4F" stop-opacity=".20"/>
-            <stop offset="1" stop-color="#2F6B4F" stop-opacity="0"/>
+            <stop stop-color="#58A6FF" stop-opacity=".20"/>
+            <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
         </linearGradient>
     </defs>
 
@@ -71,10 +125,10 @@
     </text>
 
     <text x="36" y="124" fill="#587064" font-size="15">
-        CS Student · ML Engineer · Kaggle Expert · Open Source Contributor
+        CS Student · ML Engineer · Kaggle Competitor · Open Source Contributor
     </text>
 
-    <text x="36" y="153" fill="#2F6B4F"
+    <text x="36" y="153" fill="#58A6FF"
           font-size="11" class="mono">
         MACHINE LEARNING · GENERATIVE AI · OPEN SOURCE
     </text>
