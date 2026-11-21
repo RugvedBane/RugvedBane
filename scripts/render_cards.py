@@ -31,7 +31,7 @@ USERNAME = os.getenv("GITHUB_USERNAME", "RugvedBane")
 NAME = os.getenv("PROFILE_NAME", "Rugved Bane")
 
 # Hero card text
-HERO_LABEL = os.getenv("HERO_LABEL", "CS STUDENT")
+HERO_LABEL = os.getenv("HERO_LABEL", "FORMER AI ENGINEER INTERN · NIRIKSHAN AI")
 TAGLINE_1 = os.getenv(
     "PROFILE_TAGLINE_1",
     "I build Machine Learning and GenAI systems."
