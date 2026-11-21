@@ -123,16 +123,13 @@ jobs:
         run: |
           python scripts/render_cards.py
 
-      - name: Commit generated cards
+      - name: Commit and push generated cards
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add data/contributions.json
-          git add assets/*.ttf
-          git add cards/*.svg
+          git add data/contributions.json assets/ cards/
+          git commit -m "chore: refresh animated profile cards" || exit 0
 
-          if ! git diff --cached --quiet; then
-            git commit -m "chore: refresh animated profile cards"
-            git push
-          fi
+          git pull --rebase origin main
+          git push origin main
