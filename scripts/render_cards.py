@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python3
 """Generate animated forest-green SVG cards for a GitHub profile README.
 
@@ -71,7 +72,6 @@ PROJECTS = [
             "experiment memory and code visibility."
         ),
         "repo": f"https://github.com/{USERNAME}/Kwest",
-        "demo": "",
         "tag": "GENAI"
     },
     {
@@ -82,7 +82,6 @@ PROJECTS = [
             "detecting deepfake audio."
         ),
         "repo": f"https://github.com/{USERNAME}/deepfake-audio-detector",
-        "demo": "https://deepfake-audio-detector-rugved.streamlit.app/",
         "tag": "MACHINE LEARNING"
     },
     {
@@ -93,7 +92,6 @@ PROJECTS = [
             "UFC fight outcomes."
         ),
         "repo": f"https://github.com/{USERNAME}/UFC-Predictor",
-        "demo": "https://ufc-predictor-rugvedbane.streamlit.app/",
         "tag": "MACHINE LEARNING"
     }
 ]
@@ -238,7 +236,7 @@ def load_serif_fonts():
     return uris
 
 
-def svg_start(width, height, delay, font_data):
+def svg_start(width, height, delay, font_data, show_status_dot=True):
     inter, fira = font_data
 
     font_css = ""
@@ -293,22 +291,8 @@ def svg_start(width, height, delay, font_data):
                        both;
         }}
 
-        .tile-ring {{
-            transform-box: fill-box;
-            transform-origin: center;
-            animation: ring-pulse 2.4s ease-out infinite;
-        }}
-
         .tile-shine {{
             animation: shine 4.5s ease-in-out infinite;
-        }}
-
-        .tile-arrow {{
-            animation: arrow-nudge 1.8s ease-in-out infinite;
-        }}
-
-        .tile-dot {{
-            animation: glow 2s ease-in-out infinite alternate;
         }}
 
         @keyframes enter {{
@@ -370,17 +354,6 @@ def svg_start(width, height, delay, font_data):
             }}
         }}
 
-        @keyframes ring-pulse {{
-            0% {{
-                opacity: .7;
-                transform: scale(.6);
-            }}
-            100% {{
-                opacity: 0;
-                transform: scale(2.4);
-            }}
-        }}
-
         @keyframes shine {{
             0%, 65% {{
                 transform: translateX(-340px);
@@ -388,11 +361,6 @@ def svg_start(width, height, delay, font_data):
             85%, 100% {{
                 transform: translateX(340px);
             }}
-        }}
-
-        @keyframes arrow-nudge {{
-            0%, 100% {{ transform: translateX(0); }}
-            50% {{ transform: translateX(4px); }}
         }}
         """
 
@@ -416,7 +384,7 @@ def svg_start(width, height, delay, font_data):
 
     smil = ""
 
-    if not STATIC:
+    if not STATIC and show_status_dot:
         smil = f"""
         <circle cx="{width - 28}" cy="26" r="3" fill="{ACCENT}">
             <animate
@@ -468,11 +436,11 @@ def svg_start(width, height, delay, font_data):
     """
 
 
-def save_card(filename, body, width, height, delay, fonts):
+def save_card(filename, body, width, height, delay, fonts, show_status_dot=True):
     OUT.mkdir(parents=True, exist_ok=True)
 
     content = (
-        svg_start(width, height, delay, fonts)
+        svg_start(width, height, delay, fonts, show_status_dot)
         + body
         + "</g></svg>"
     )
@@ -580,22 +548,21 @@ def count_up_smil(target, begin):
     return "".join(frames)
 
 
-
 def link_tiles(fonts):
-    """Generate two centered profile link cards: Kaggle and LinkedIn."""
+    """Generate two centered profile link cards: LinkedIn and Kaggle."""
 
     links = [
         (
             "02-link-2.svg",
-            "KAGGLE",
-            "Competitions & notebooks",
-            "https://www.kaggle.com/rugvedbane"
-        ),
-        (
-            "02-link-3.svg",
             "LINKEDIN",
             "Professional profile",
             "https://www.linkedin.com/in/rugvedbane/"
+        ),
+        (
+            "02-link-3.svg",
+            "KAGGLE",
+            "Competitions & notebooks",
+            "https://www.kaggle.com/rugvedbane"
         )
     ]
 
@@ -632,24 +599,6 @@ def link_tiles(fonts):
             </g>
             """
 
-        ring = ""
-
-        if not STATIC:
-            ring = f"""
-            <circle class="tile-ring"
-                    cx="250" cy="108" r="8"
-                    fill="none" stroke="{ACCENT}"
-                    stroke-width="1.5"/>
-
-            <circle class="tile-dot"
-                    cx="250" cy="108" r="3"
-                    fill="{ACCENT}"/>
-            """
-
-        arrow_animation = (
-            "" if STATIC else "class='tile-arrow'"
-        )
-
         body = f"""
         <g class="tile-card"
            style="animation-delay:{delay:.2f}s">
@@ -679,12 +628,11 @@ def link_tiles(fonts):
             </text>
 
             <text x="55" y="112" fill="{ACCENT}"
-                  font-size="12" {arrow_animation}>
+                  font-size="12">
                 ↗
             </text>
 
             {counter}
-            {ring}
             {shine}
 
             <a href="{esc(url)}">
@@ -700,7 +648,8 @@ def link_tiles(fonts):
             280,
             130,
             delay,
-            fonts
+            fonts,
+            show_status_dot=False
         )
 
 
@@ -805,50 +754,39 @@ def project_cards(fonts):
         old_card.unlink()
 
     for i, project in enumerate(PROJECTS, 1):
-        demo = ""
-
-        if project["demo"]:
-            demo = f"""
-            <a href="{esc(project['demo'])}">
-                <text x="690" y="162"
-                      fill="{ACCENT}" font-size="11">
-                    LIVE DEMO ↗
-                </text>
-            </a>
-            """
-
         body = f"""
-        <text x="24" y="30" fill="{ACCENT}"
-              font-size="9" class="mono">
-            FEATURED PROJECT / {i:02d}
-        </text>
-
-        <text x="24" y="72" fill="{TEXT}"
-              font-size="25" font-weight="750">
-            {esc(project['name'])}
-        </text>
-
-        <text x="25" y="98" fill="{ACCENT}" font-size="12">
-            {esc(project['subtitle'])}
-        </text>
-
-        <text x="25" y="128" fill="{MUTED}" font-size="11">
-            {esc(project['description'])}
-        </text>
-
         <a href="{esc(project['repo'])}">
+            <rect x="1" y="1" width="858" height="198"
+                  rx="18" fill="transparent"/>
+
+            <text x="24" y="30" fill="{ACCENT}"
+                  font-size="9" class="mono">
+                FEATURED PROJECT / {i:02d}
+            </text>
+
+            <text x="24" y="72" fill="{TEXT}"
+                  font-size="25" font-weight="750">
+                {esc(project['name'])}
+            </text>
+
+            <text x="25" y="98" fill="{ACCENT}" font-size="12">
+                {esc(project['subtitle'])}
+            </text>
+
+            <text x="25" y="128" fill="{MUTED}" font-size="11">
+                {esc(project['description'])}
+            </text>
+
             <text x="25" y="163" fill="{ACCENT}"
                   font-size="10" class="mono">
                 SOURCE REPOSITORY ↗
             </text>
+
+            <text x="690" y="30" fill="{MUTED}"
+                  font-size="9" class="mono">
+                {esc(project['tag'])}
+            </text>
         </a>
-
-        <text x="690" y="30" fill="{MUTED}"
-              font-size="9" class="mono">
-            {esc(project['tag'])}
-        </text>
-
-        {demo}
         """
 
         save_card(
@@ -862,6 +800,12 @@ def project_cards(fonts):
 
 
 def open_source_card(fonts):
+    merged_pr_url = (
+        f"https://github.com/search?"
+        f"q=author%3A{USERNAME}+is%3Apr+is%3Amerged"
+        f"&type=pullrequests"
+    )
+
     prs = [
         (
             "scikit-learn/scikit-learn",
@@ -914,6 +858,10 @@ def open_source_card(fonts):
         """)
 
     body = f"""
+    <a href="{esc(merged_pr_url)}">
+    <rect x="1" y="1" width="858" height="258"
+          rx="18" fill="transparent"/>
+
     <text x="27" y="31" fill="{TEXT}"
           font-size="18" font-weight="720">
         Open-source contributions
@@ -925,6 +873,7 @@ def open_source_card(fonts):
     </text>
 
     {''.join(rows)}
+    </a>
     """
 
     save_card("09-open-source.svg", body, 860, 260, 1.8, fonts)

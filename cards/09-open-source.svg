@@ -53,22 +53,8 @@
                        both;
         }
 
-        .tile-ring {
-            transform-box: fill-box;
-            transform-origin: center;
-            animation: ring-pulse 2.4s ease-out infinite;
-        }
-
         .tile-shine {
             animation: shine 4.5s ease-in-out infinite;
-        }
-
-        .tile-arrow {
-            animation: arrow-nudge 1.8s ease-in-out infinite;
-        }
-
-        .tile-dot {
-            animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes enter {
@@ -130,17 +116,6 @@
             }
         }
 
-        @keyframes ring-pulse {
-            0% {
-                opacity: .7;
-                transform: scale(.6);
-            }
-            100% {
-                opacity: 0;
-                transform: scale(2.4);
-            }
-        }
-
         @keyframes shine {
             0%, 65% {
                 transform: translateX(-340px);
@@ -148,11 +123,6 @@
             85%, 100% {
                 transform: translateX(340px);
             }
-        }
-
-        @keyframes arrow-nudge {
-            0%, 100% { transform: translateX(0); }
-            50% { transform: translateX(4px); }
         }
         
             
@@ -197,6 +167,10 @@
         </circle>
         
     
+    <a href="https://github.com/search?q=author%3ARugvedBane+is%3Apr+is%3Amerged&amp;type=pullrequests">
+    <rect x="1" y="1" width="858" height="258"
+          rx="18" fill="transparent"/>
+
     <text x="27" y="31" fill="#173D32"
           font-size="18" font-weight="720">
         Open-source contributions
@@ -272,4 +246,5 @@
             MERGED
         </text>
         
+    </a>
     </g></svg>
