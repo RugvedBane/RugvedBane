@@ -208,7 +208,7 @@
 
     <text x="28" y="91" fill="#2F6B4F"
           font-size="26" font-weight="750">
-        166
+        169
     </text>
 
     <text x="29" y="108" fill="#587064" font-size="9">
@@ -305,13 +305,13 @@
         </text>
         
         <rect class="bar"
-              x="240" y="207"
-              width="29" height="6"
+              x="240" y="208"
+              width="29" height="5"
               rx="4" fill="#2F6B4F"
               style="animation-delay:0.915s"/>
 
         <text 
-              x="254" y="198"
+              x="254" y="199"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -385,13 +385,13 @@
         </text>
         
         <rect class="bar"
-              x="500" y="194"
-              width="29" height="19"
+              x="500" y="195"
+              width="29" height="18"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.135s"/>
 
         <text 
-              x="514" y="185"
+              x="514" y="186"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -405,13 +405,13 @@
         </text>
         
         <rect class="bar"
-              x="565" y="179"
-              width="29" height="34"
+              x="565" y="181"
+              width="29" height="32"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.190s"/>
 
         <text 
-              x="579" y="170"
+              x="579" y="172"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -425,13 +425,13 @@
         </text>
         
         <rect class="bar"
-              x="630" y="178"
-              width="29" height="35"
+              x="630" y="179"
+              width="29" height="34"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.245s"/>
 
         <text 
-              x="644" y="169"
+              x="644" y="170"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -445,13 +445,13 @@
         </text>
         
         <rect class="bar"
-              x="695" y="194"
-              width="29" height="19"
+              x="695" y="195"
+              width="29" height="18"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.300s"/>
 
         <text 
-              x="709" y="185"
+              x="709" y="186"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -475,7 +475,7 @@
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
-            59
+            62
         </text>
 
         <text x="774" y="238"
