@@ -1,9 +1,9 @@
 
     <svg xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink"
-         width="860"
-         height="200"
-         viewBox="0 0 860 200">
+         width="280"
+         height="130"
+         viewBox="0 0 280 130">
 
         <title>Rugved Bane - GitHub Profile</title>
 
@@ -20,21 +20,55 @@
 
             
         .card {
-            animation: enter .85s ease-out 1.7s both;
+            animation: enter .85s ease-out 0.63s both;
         }
 
         .glow {
-            animation: glow 3.5s ease-in-out 1.7s infinite alternate;
+            animation: glow 3.5s ease-in-out 0.63s infinite alternate;
         }
 
         .bar {
             transform-box: fill-box;
             transform-origin: bottom;
-            animation: grow .9s ease-out 1.9s both;
+            animation: grow .9s ease-out 0.8300000000000001s both;
+        }
+
+        .best-value {
+            opacity: 0;
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pop .45s cubic-bezier(.2, 1.5, .4, 1)
+                       1.73s forwards;
         }
 
         .cell {
-            animation: appear .5s ease-out 1.7s both;
+            opacity: 0;
+            animation: appear .25s ease-out both;
+        }
+
+        .tile-card {
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation: tile-enter .9s cubic-bezier(.2, 1.4, .4, 1)
+                       both;
+        }
+
+        .tile-ring {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: ring-pulse 2.4s ease-out infinite;
+        }
+
+        .tile-shine {
+            animation: shine 4.5s ease-in-out infinite;
+        }
+
+        .tile-arrow {
+            animation: arrow-nudge 1.8s ease-in-out infinite;
+        }
+
+        .tile-dot {
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes enter {
@@ -50,7 +84,7 @@
 
         @keyframes glow {
             from { opacity: .2; }
-            to { opacity: .8; }
+            to { opacity: .9; }
         }
 
         @keyframes grow {
@@ -62,6 +96,64 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(.4) translateY(8px);
+            }
+            75% {
+                opacity: 1;
+                transform: scale(1.2) translateY(-3px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes tile-enter {
+            0% {
+                opacity: 0;
+                transform: translateY(65px) rotate(8deg);
+            }
+            65% {
+                opacity: 1;
+                transform: translateY(-9px) rotate(-2deg);
+            }
+            82% {
+                transform: translateY(4px) rotate(1deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        @keyframes ring-pulse {
+            0% {
+                opacity: .7;
+                transform: scale(.6);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2.4);
+            }
+        }
+
+        @keyframes shine {
+            0%, 65% {
+                transform: translateX(-340px);
+            }
+            85%, 100% {
+                transform: translateX(340px);
+            }
+        }
+
+        @keyframes arrow-nudge {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
         
             
     @media (prefers-reduced-motion: reduce) {
@@ -70,16 +162,12 @@
             transition: none !important;
         }
 
-        animate {
+        animate, set {
             display: none !important;
         }
 
-        .card {
+        .card, .tile-card, .bar, .best-value, .cell {
             opacity: 1 !important;
-            transform: none !important;
-        }
-
-        .bar {
             transform: none !important;
         }
     }
@@ -90,61 +178,85 @@
               rx="19" fill="#F4F1E7"/>
 
         <rect x="1" y="1"
-              width="858"
-              height="198"
+              width="278"
+              height="128"
               rx="18"
               fill="none"
               stroke="#CCD5C9"/>
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#2F6B4F">
+        <circle cx="252" cy="26" r="3" fill="#2F6B4F">
             <animate
                 attributeName="opacity"
                 values=".3;1;.3"
                 dur="2.8s"
-                begin="1.7s"
+                begin="0.63s"
                 repeatCount="indefinite"
             />
         </circle>
         
     
-        <text x="24" y="30" fill="#2F6B4F"
-              font-size="9" class="mono">
-            FEATURED PROJECT / 05
-        </text>
+        <g class="tile-card"
+           style="animation-delay:0.63s">
 
-        <text x="24" y="72" fill="#173D32"
-              font-size="25" font-weight="750">
-            Netflix Data Analysis
-        </text>
+            <rect x="1" y="1"
+                  width="278" height="128"
+                  rx="16" fill="#EAE6D9"
+                  stroke="#CCD5C9"/>
 
-        <text x="25" y="98" fill="#2F6B4F" font-size="12">
-            Exploratory data analysis
-        </text>
-
-        <text x="25" y="128" fill="#587064" font-size="11">
-            Exploration and analysis of Netflix data.
-        </text>
-
-        <a href="https://github.com/RugvedBane/Netflix-data-Analysis">
-            <text x="25" y="163" fill="#2F6B4F"
-                  font-size="10" class="mono">
-                SOURCE REPOSITORY ↗
+            <text x="20" y="28" fill="#2F6B4F"
+                  font-size="9" class="mono">
+                03 / PROFILE
             </text>
-        </a>
 
-        <text x="690" y="30" fill="#587064"
-              font-size="9" class="mono">
-            DATA SCIENCE
-        </text>
+            <text x="20" y="63" fill="#173D32"
+                  font-size="20" font-weight="720">
+                LINKEDIN
+            </text>
 
-        
-            <a href="https://www.kaggle.com/code/rugvedbane/netflix-data-analysis">
-                <text x="690" y="162"
-                      fill="#2F6B4F" font-size="11">
-                    LIVE DEMO ↗
-                </text>
-            </a>
+            <text x="20" y="87" fill="#587064" font-size="10">
+                Professional profile
+            </text>
+
+            <text x="20" y="112" fill="#2F6B4F" font-size="10"
+                  class="mono">
+                OPEN
+            </text>
+
+            <text x="55" y="112" fill="#2F6B4F"
+                  font-size="12" class='tile-arrow'>
+                ↗
+            </text>
+
+            <text x="235" y="48" text-anchor="end" fill="#2F6B4F" font-size="25" class="mono">03<set attributeName="textContent" to="00" begin="1.280s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.325s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.370s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.415s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.460s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.505s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.550s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.595s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.640s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.685s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.730s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.775s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.820s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.865s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.910s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="03" begin="1.955s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="03" begin="2.000s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="03" begin="2.045s" dur="0.045s" fill="freeze"/></text>
             
+            <circle class="tile-ring"
+                    cx="250" cy="108" r="8"
+                    fill="none" stroke="#2F6B4F"
+                    stroke-width="1.5"/>
+
+            <circle class="tile-dot"
+                    cx="250" cy="108" r="3"
+                    fill="#2F6B4F"/>
+            
+            
+            <clipPath id="tile-clip-3">
+                <rect x="1" y="1" width="278" height="128" rx="16"/>
+            </clipPath>
+
+            <g clip-path="url(#tile-clip-3)">
+                <rect class="tile-shine"
+                      x="-340" y="0"
+                      width="100" height="130"
+                      fill="white" opacity=".18"
+                      transform="skewX(-20)"/>
+            </g>
+            
+
+            <a href="https://www.linkedin.com/in/rugvedbane/">
+                <rect x="1" y="1" width="278" height="128"
+                      rx="16" fill="transparent"/>
+            </a>
+        </g>
         </g></svg>

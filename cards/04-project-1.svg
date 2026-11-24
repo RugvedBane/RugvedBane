@@ -33,8 +33,42 @@
             animation: grow .9s ease-out 1.18s both;
         }
 
+        .best-value {
+            opacity: 0;
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pop .45s cubic-bezier(.2, 1.5, .4, 1)
+                       2.08s forwards;
+        }
+
         .cell {
-            animation: appear .5s ease-out 0.98s both;
+            opacity: 0;
+            animation: appear .25s ease-out both;
+        }
+
+        .tile-card {
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation: tile-enter .9s cubic-bezier(.2, 1.4, .4, 1)
+                       both;
+        }
+
+        .tile-ring {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: ring-pulse 2.4s ease-out infinite;
+        }
+
+        .tile-shine {
+            animation: shine 4.5s ease-in-out infinite;
+        }
+
+        .tile-arrow {
+            animation: arrow-nudge 1.8s ease-in-out infinite;
+        }
+
+        .tile-dot {
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes enter {
@@ -50,7 +84,7 @@
 
         @keyframes glow {
             from { opacity: .2; }
-            to { opacity: .8; }
+            to { opacity: .9; }
         }
 
         @keyframes grow {
@@ -62,6 +96,64 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(.4) translateY(8px);
+            }
+            75% {
+                opacity: 1;
+                transform: scale(1.2) translateY(-3px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes tile-enter {
+            0% {
+                opacity: 0;
+                transform: translateY(65px) rotate(8deg);
+            }
+            65% {
+                opacity: 1;
+                transform: translateY(-9px) rotate(-2deg);
+            }
+            82% {
+                transform: translateY(4px) rotate(1deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        @keyframes ring-pulse {
+            0% {
+                opacity: .7;
+                transform: scale(.6);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2.4);
+            }
+        }
+
+        @keyframes shine {
+            0%, 65% {
+                transform: translateX(-340px);
+            }
+            85%, 100% {
+                transform: translateX(340px);
+            }
+        }
+
+        @keyframes arrow-nudge {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
         
             
     @media (prefers-reduced-motion: reduce) {
@@ -70,16 +162,12 @@
             transition: none !important;
         }
 
-        animate {
+        animate, set {
             display: none !important;
         }
 
-        .card {
+        .card, .tile-card, .bar, .best-value, .cell {
             opacity: 1 !important;
-            transform: none !important;
-        }
-
-        .bar {
             transform: none !important;
         }
     }

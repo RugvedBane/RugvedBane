@@ -20,21 +20,55 @@
 
             
         .card {
-            animation: enter .85s ease-out 0.28s both;
+            animation: enter .85s ease-out 0.31s both;
         }
 
         .glow {
-            animation: glow 3.5s ease-in-out 0.28s infinite alternate;
+            animation: glow 3.5s ease-in-out 0.31s infinite alternate;
         }
 
         .bar {
             transform-box: fill-box;
             transform-origin: bottom;
-            animation: grow .9s ease-out 0.48000000000000004s both;
+            animation: grow .9s ease-out 0.51s both;
+        }
+
+        .best-value {
+            opacity: 0;
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pop .45s cubic-bezier(.2, 1.5, .4, 1)
+                       1.4100000000000001s forwards;
         }
 
         .cell {
-            animation: appear .5s ease-out 0.28s both;
+            opacity: 0;
+            animation: appear .25s ease-out both;
+        }
+
+        .tile-card {
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation: tile-enter .9s cubic-bezier(.2, 1.4, .4, 1)
+                       both;
+        }
+
+        .tile-ring {
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: ring-pulse 2.4s ease-out infinite;
+        }
+
+        .tile-shine {
+            animation: shine 4.5s ease-in-out infinite;
+        }
+
+        .tile-arrow {
+            animation: arrow-nudge 1.8s ease-in-out infinite;
+        }
+
+        .tile-dot {
+            animation: glow 2s ease-in-out infinite alternate;
         }
 
         @keyframes enter {
@@ -50,7 +84,7 @@
 
         @keyframes glow {
             from { opacity: .2; }
-            to { opacity: .8; }
+            to { opacity: .9; }
         }
 
         @keyframes grow {
@@ -62,6 +96,64 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        @keyframes pop {
+            0% {
+                opacity: 0;
+                transform: scale(.4) translateY(8px);
+            }
+            75% {
+                opacity: 1;
+                transform: scale(1.2) translateY(-3px);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        @keyframes tile-enter {
+            0% {
+                opacity: 0;
+                transform: translateY(65px) rotate(8deg);
+            }
+            65% {
+                opacity: 1;
+                transform: translateY(-9px) rotate(-2deg);
+            }
+            82% {
+                transform: translateY(4px) rotate(1deg);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }
+        }
+
+        @keyframes ring-pulse {
+            0% {
+                opacity: .7;
+                transform: scale(.6);
+            }
+            100% {
+                opacity: 0;
+                transform: scale(2.4);
+            }
+        }
+
+        @keyframes shine {
+            0%, 65% {
+                transform: translateX(-340px);
+            }
+            85%, 100% {
+                transform: translateX(340px);
+            }
+        }
+
+        @keyframes arrow-nudge {
+            0%, 100% { transform: translateX(0); }
+            50% { transform: translateX(4px); }
+        }
         
             
     @media (prefers-reduced-motion: reduce) {
@@ -70,16 +162,12 @@
             transition: none !important;
         }
 
-        animate {
+        animate, set {
             display: none !important;
         }
 
-        .card {
+        .card, .tile-card, .bar, .best-value, .cell {
             opacity: 1 !important;
-            transform: none !important;
-        }
-
-        .bar {
             transform: none !important;
         }
     }
@@ -103,32 +191,72 @@
                 attributeName="opacity"
                 values=".3;1;.3"
                 dur="2.8s"
-                begin="0.28s"
+                begin="0.31s"
                 repeatCount="indefinite"
             />
         </circle>
         
     
-        <text x="20" y="28" fill="#2F6B4F"
-              font-size="9" class="mono">
-            01 / PROFILE
-        </text>
+        <g class="tile-card"
+           style="animation-delay:0.31s">
 
-        <text x="20" y="63" fill="#173D32"
-              font-size="20" font-weight="720">
-            KAGGLE
-        </text>
+            <rect x="1" y="1"
+                  width="278" height="128"
+                  rx="16" fill="#EAE6D9"
+                  stroke="#CCD5C9"/>
 
-        <text x="20" y="87" fill="#587064" font-size="10">
-            Competitions &amp; notebooks
-        </text>
+            <text x="20" y="28" fill="#2F6B4F"
+                  font-size="9" class="mono">
+                01 / PROFILE
+            </text>
 
-        <text x="20" y="112" fill="#2F6B4F" font-size="10">
-            OPEN ↗
-        </text>
+            <text x="20" y="63" fill="#173D32"
+                  font-size="20" font-weight="720">
+                GITHUB
+            </text>
 
-        <a href="https://www.kaggle.com/rugvedbane">
-            <rect x="1" y="1" width="278" height="128"
-                  fill="transparent"/>
-        </a>
+            <text x="20" y="87" fill="#587064" font-size="10">
+                Projects &amp; open source
+            </text>
+
+            <text x="20" y="112" fill="#2F6B4F" font-size="10"
+                  class="mono">
+                OPEN
+            </text>
+
+            <text x="55" y="112" fill="#2F6B4F"
+                  font-size="12" class='tile-arrow'>
+                ↗
+            </text>
+
+            <text x="235" y="48" text-anchor="end" fill="#2F6B4F" font-size="25" class="mono">01<set attributeName="textContent" to="00" begin="0.960s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.005s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.050s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.095s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.140s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.185s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.230s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.275s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.320s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.365s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.410s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.455s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.500s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.545s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.590s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.635s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.680s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.725s" dur="0.045s" fill="freeze"/></text>
+            
+            <circle class="tile-ring"
+                    cx="250" cy="108" r="8"
+                    fill="none" stroke="#2F6B4F"
+                    stroke-width="1.5"/>
+
+            <circle class="tile-dot"
+                    cx="250" cy="108" r="3"
+                    fill="#2F6B4F"/>
+            
+            
+            <clipPath id="tile-clip-1">
+                <rect x="1" y="1" width="278" height="128" rx="16"/>
+            </clipPath>
+
+            <g clip-path="url(#tile-clip-1)">
+                <rect class="tile-shine"
+                      x="-340" y="0"
+                      width="100" height="130"
+                      fill="white" opacity=".18"
+                      transform="skewX(-20)"/>
+            </g>
+            
+
+            <a href="https://github.com/RugvedBane">
+                <rect x="1" y="1" width="278" height="128"
+                      rx="16" fill="transparent"/>
+            </a>
+        </g>
         </g></svg>

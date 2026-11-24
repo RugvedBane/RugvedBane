@@ -5,8 +5,10 @@ Usage:
     python scripts/render_cards.py
     STATIC=1 python scripts/render_cards.py
 
-Extra files the hero card needs (commit them to your repo):
+Optional assets:
     assets/portrait-sketch.png
+    assets/Inter.ttf
+    assets/FiraCode.ttf
     assets/InstrumentSerif-Regular.ttf
     assets/InstrumentSerif-Italic.ttf
 """
@@ -30,12 +32,16 @@ ASSETS = ROOT / "assets"
 USERNAME = os.getenv("GITHUB_USERNAME", "RugvedBane")
 NAME = os.getenv("PROFILE_NAME", "Rugved Bane")
 
-# Hero card text
-HERO_LABEL = os.getenv("HERO_LABEL", "FORMER AI ENGINEER INTERN · NIRIKSHAN AI")
+HERO_LABEL = os.getenv(
+    "HERO_LABEL",
+    "FORMER AI ENGINEER INTERN · NIRIKSHAN AI"
+)
+
 TAGLINE_1 = os.getenv(
     "PROFILE_TAGLINE_1",
     "I build Machine Learning and GenAI systems."
 )
+
 TAGLINE_2 = os.getenv(
     "PROFILE_TAGLINE_2",
     "Open source contributor · Kaggle Expert."
@@ -89,22 +95,6 @@ PROJECTS = [
         "repo": f"https://github.com/{USERNAME}/UFC-Predictor",
         "demo": "https://ufc-predictor-rugvedbane.streamlit.app/",
         "tag": "MACHINE LEARNING"
-    },
-    {
-        "name": "Student Health Risk Prediction",
-        "subtitle": "Kaggle competition",
-        "description": "LightGBM + Optuna competition modelling workflow.",
-        "repo": f"https://github.com/{USERNAME}/Student-Health-Risk-PS-S6E7",
-        "demo": "https://www.kaggle.com/code/rugvedbane/student-health-risk-lightgbm-optuna-0-95014",
-        "tag": "COMPETITION"
-    },
-    {
-        "name": "Netflix Data Analysis",
-        "subtitle": "Exploratory data analysis",
-        "description": "Exploration and analysis of Netflix data.",
-        "repo": f"https://github.com/{USERNAME}/Netflix-data-Analysis",
-        "demo": "https://www.kaggle.com/code/rugvedbane/netflix-data-analysis",
-        "tag": "DATA SCIENCE"
     }
 ]
 
@@ -132,7 +122,6 @@ def calculate_stats(data):
             continue
 
     today = date.today()
-
     cursor = today if counts.get(today, 0) else today - timedelta(days=1)
 
     streak = 0
@@ -163,6 +152,8 @@ def calculate_stats(data):
         default=(None, 0)
     )
 
+    best_month = max(months, key=lambda item: item[1], default=("—", 0))
+
     return {
         "total": int(
             data.get("total_contributions", sum(counts.values()))
@@ -172,6 +163,7 @@ def calculate_stats(data):
         "busiest_date": busiest.isoformat() if busiest else "—",
         "busiest_count": peak,
         "months": months,
+        "best_month": best_month,
         "days": data.get("days", [])[-371:]
     }
 
@@ -214,11 +206,7 @@ def load_fonts():
 
 
 def load_serif_fonts():
-    """Embed Instrument Serif (regular + italic), subset to the name only.
-
-    Returns (regular_uri, italic_uri). Empty strings if unavailable, in
-    which case the hero falls back to Georgia / Times.
-    """
+    """Embed Instrument Serif regular and italic fonts."""
 
     glyphs = "".join(sorted(set(NAME)))
     uris = []
@@ -285,8 +273,42 @@ def svg_start(width, height, delay, font_data):
             animation: grow .9s ease-out {delay + .2}s both;
         }}
 
+        .best-value {{
+            opacity: 0;
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: pop .45s cubic-bezier(.2, 1.5, .4, 1)
+                       {delay + 1.1}s forwards;
+        }}
+
         .cell {{
-            animation: appear .5s ease-out {delay}s both;
+            opacity: 0;
+            animation: appear .25s ease-out both;
+        }}
+
+        .tile-card {{
+            transform-box: fill-box;
+            transform-origin: center bottom;
+            animation: tile-enter .9s cubic-bezier(.2, 1.4, .4, 1)
+                       both;
+        }}
+
+        .tile-ring {{
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: ring-pulse 2.4s ease-out infinite;
+        }}
+
+        .tile-shine {{
+            animation: shine 4.5s ease-in-out infinite;
+        }}
+
+        .tile-arrow {{
+            animation: arrow-nudge 1.8s ease-in-out infinite;
+        }}
+
+        .tile-dot {{
+            animation: glow 2s ease-in-out infinite alternate;
         }}
 
         @keyframes enter {{
@@ -302,7 +324,7 @@ def svg_start(width, height, delay, font_data):
 
         @keyframes glow {{
             from {{ opacity: .2; }}
-            to {{ opacity: .8; }}
+            to {{ opacity: .9; }}
         }}
 
         @keyframes grow {{
@@ -314,6 +336,64 @@ def svg_start(width, height, delay, font_data):
             from {{ opacity: 0; }}
             to {{ opacity: 1; }}
         }}
+
+        @keyframes pop {{
+            0% {{
+                opacity: 0;
+                transform: scale(.4) translateY(8px);
+            }}
+            75% {{
+                opacity: 1;
+                transform: scale(1.2) translateY(-3px);
+            }}
+            100% {{
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }}
+        }}
+
+        @keyframes tile-enter {{
+            0% {{
+                opacity: 0;
+                transform: translateY(65px) rotate(8deg);
+            }}
+            65% {{
+                opacity: 1;
+                transform: translateY(-9px) rotate(-2deg);
+            }}
+            82% {{
+                transform: translateY(4px) rotate(1deg);
+            }}
+            100% {{
+                opacity: 1;
+                transform: translateY(0) rotate(0);
+            }}
+        }}
+
+        @keyframes ring-pulse {{
+            0% {{
+                opacity: .7;
+                transform: scale(.6);
+            }}
+            100% {{
+                opacity: 0;
+                transform: scale(2.4);
+            }}
+        }}
+
+        @keyframes shine {{
+            0%, 65% {{
+                transform: translateX(-340px);
+            }}
+            85%, 100% {{
+                transform: translateX(340px);
+            }}
+        }}
+
+        @keyframes arrow-nudge {{
+            0%, 100% {{ transform: translateX(0); }}
+            50% {{ transform: translateX(4px); }}
+        }}
         """
 
     reduced_motion = """
@@ -323,16 +403,12 @@ def svg_start(width, height, delay, font_data):
             transition: none !important;
         }
 
-        animate {
+        animate, set {
             display: none !important;
         }
 
-        .card {
+        .card, .tile-card, .bar, .best-value, .cell {
             opacity: 1 !important;
-            transform: none !important;
-        }
-
-        .bar {
             transform: none !important;
         }
     }
@@ -405,7 +481,7 @@ def save_card(filename, body, width, height, delay, fonts):
 
 
 def hero(fonts):
-    """Top card: label, big serif name, tagline, sketch portrait."""
+    """Top card: label, large serif name, tagline and optional portrait."""
 
     serif_regular, serif_italic = load_serif_fonts()
 
@@ -429,7 +505,6 @@ def hero(fonts):
     first = parts[0] if parts else NAME
     rest = " ".join(parts[1:])
 
-    # Sketch portrait (transparent PNG), embedded so the SVG is standalone.
     portrait = ""
     portrait_file = ASSETS / "portrait-sketch.png"
 
@@ -483,8 +558,35 @@ def hero(fonts):
     save_card("01-hero.svg", body, 860, 300, 0, fonts)
 
 
+def count_up_smil(target, begin):
+    """Create 18 discrete SMIL text frames for a number."""
+
+    if STATIC:
+        return ""
+
+    frames = []
+
+    for i in range(1, 19):
+        value = round(target * i / 18)
+        start = begin + (i - 1) * 0.045
+
+        frames.append(
+            f'<set attributeName="textContent" '
+            f'to="{value:02d}" '
+            f'begin="{start:.3f}s" '
+            f'dur="0.045s" fill="freeze"/>'
+        )
+
+    return "".join(frames)
+
+
 def link_tiles(fonts):
     links = [
+        (
+            "GITHUB",
+            "Projects & open source",
+            f"https://github.com/{USERNAME}"
+        ),
         (
             "KAGGLE",
             "Competitions & notebooks",
@@ -498,29 +600,94 @@ def link_tiles(fonts):
     ]
 
     for i, (title, subtitle, url) in enumerate(links, 1):
+        delay = 0.15 + i * 0.16
+        number = f"{i:02d}"
+
+        counter = (
+            f'<text x="235" y="48" text-anchor="end" '
+            f'fill="{ACCENT}" font-size="25" '
+            f'class="mono">{number}'
+            f'{count_up_smil(i, delay + 0.65)}'
+            f'</text>'
+        )
+
+        shine = ""
+
+        if not STATIC:
+            shine = f"""
+            <clipPath id="tile-clip-{i}">
+                <rect x="1" y="1" width="278" height="128" rx="16"/>
+            </clipPath>
+
+            <g clip-path="url(#tile-clip-{i})">
+                <rect class="tile-shine"
+                      x="-340" y="0"
+                      width="100" height="130"
+                      fill="white" opacity=".18"
+                      transform="skewX(-20)"/>
+            </g>
+            """
+
+        ring = ""
+
+        if not STATIC:
+            ring = f"""
+            <circle class="tile-ring"
+                    cx="250" cy="108" r="8"
+                    fill="none" stroke="{ACCENT}"
+                    stroke-width="1.5"/>
+
+            <circle class="tile-dot"
+                    cx="250" cy="108" r="3"
+                    fill="{ACCENT}"/>
+            """
+
+        arrow_animation = (
+            "" if STATIC else "class='tile-arrow'"
+        )
+
         body = f"""
-        <text x="20" y="28" fill="{ACCENT}"
-              font-size="9" class="mono">
-            0{i} / PROFILE
-        </text>
+        <g class="tile-card"
+           style="animation-delay:{delay:.2f}s">
 
-        <text x="20" y="63" fill="{TEXT}"
-              font-size="20" font-weight="720">
-            {esc(title)}
-        </text>
+            <rect x="1" y="1"
+                  width="278" height="128"
+                  rx="16" fill="{PANEL}"
+                  stroke="{BORDER}"/>
 
-        <text x="20" y="87" fill="{MUTED}" font-size="10">
-            {esc(subtitle)}
-        </text>
+            <text x="20" y="28" fill="{ACCENT}"
+                  font-size="9" class="mono">
+                0{i} / PROFILE
+            </text>
 
-        <text x="20" y="112" fill="{ACCENT}" font-size="10">
-            OPEN ↗
-        </text>
+            <text x="20" y="63" fill="{TEXT}"
+                  font-size="20" font-weight="720">
+                {esc(title)}
+            </text>
 
-        <a href="{esc(url)}">
-            <rect x="1" y="1" width="278" height="128"
-                  fill="transparent"/>
-        </a>
+            <text x="20" y="87" fill="{MUTED}" font-size="10">
+                {esc(subtitle)}
+            </text>
+
+            <text x="20" y="112" fill="{ACCENT}" font-size="10"
+                  class="mono">
+                OPEN
+            </text>
+
+            <text x="55" y="112" fill="{ACCENT}"
+                  font-size="12" {arrow_animation}>
+                ↗
+            </text>
+
+            {counter}
+            {ring}
+            {shine}
+
+            <a href="{esc(url)}">
+                <rect x="1" y="1" width="278" height="128"
+                      rx="16" fill="transparent"/>
+            </a>
+        </g>
         """
 
         save_card(
@@ -528,14 +695,9 @@ def link_tiles(fonts):
             body,
             280,
             130,
-            .2 + i * .08,
+            delay,
             fonts
         )
-
-    # Remove the old third social card if it exists.
-    old_card = OUT / "02-link-3.svg"
-    if old_card.exists():
-        old_card.unlink()
 
 
 def activity_card(stats, fonts):
@@ -546,20 +708,32 @@ def activity_card(stats, fonts):
 
     bars = []
 
-    # Bars are deliberately placed BELOW all statistics.
     chart_baseline = 213
     chart_height = 65
+
+    best_month = stats["best_month"][0]
 
     for i, (month, value) in enumerate(stats["months"]):
         x = 45 + i * 65
         height = max(3, round(chart_height * value / max_value))
         y = chart_baseline - height
 
+        is_best = month == best_month and value > 0
+
         bars.append(f"""
         <rect class="bar"
               x="{x}" y="{y}"
               width="29" height="{height}"
-              rx="4" fill="{ACCENT}"/>
+              rx="4" fill="{ACCENT}"
+              style="animation-delay:{0.75 + i * 0.055:.3f}s"/>
+
+        {"<text class='best-value' " if is_best and not STATIC else "<text "}
+              x="{x + 14}" y="{max(135, y - 9)}"
+              text-anchor="middle"
+              fill="{ACCENT}" font-size="10"
+              font-weight="700">
+            {value if is_best else ""}
+        </text>
 
         <text x="{x + 14}" y="238"
               text-anchor="middle"
@@ -622,6 +796,10 @@ def activity_card(stats, fonts):
 
 
 def project_cards(fonts):
+    # Delete stale project SVGs before generating the current set.
+    for old_card in OUT.glob("04-project-*.svg"):
+        old_card.unlink()
+
     for i, project in enumerate(PROJECTS, 1):
         demo = ""
 
@@ -767,8 +945,18 @@ def contribution_graph(stats, fonts):
 
         level = max(0, min(4, int(day.get("level", 0))))
 
+        reveal_delay = col * 0.045 + row * 0.008
+
+        cell_animation = ""
+
+        if not STATIC:
+            cell_animation = (
+                f'style="animation-delay:{reveal_delay:.3f}s"'
+            )
+
         cells.append(f"""
         <rect class="cell"
+              {cell_animation}
               x="{x}" y="{y}"
               width="8" height="8"
               rx="2" fill="{colors[level]}">
@@ -781,7 +969,6 @@ def contribution_graph(stats, fonts):
         </rect>
         """)
 
-    # Move legend down to create clear separation from the grid.
     legend = "".join(
         f'<rect x="{58+i*14}" y="178" width="9" height="9" '
         f'rx="2" fill="{color}"/>'
@@ -831,6 +1018,9 @@ def main():
     print(
         f"Generated {len(list(OUT.glob('*.svg')))} SVG cards."
     )
+
+    if STATIC:
+        print("Static mode enabled. Animations are disabled.")
 
 
 if __name__ == "__main__":

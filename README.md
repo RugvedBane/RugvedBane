@@ -1,16 +1,11 @@
 <p align="center">
-  <img src="cards/01-hero.svg" width="100%" alt="Profile Hero">
-</p>
-
-<p align="center">
   <a href="https://www.kaggle.com/rugvedbane">
-    <img src="cards/02-link-1.svg" width="49%" alt="Kaggle">
+    <img src="cards/02-link-2.svg" width="32.5%" alt="Kaggle">
   </a>
   <a href="https://www.linkedin.com/in/rugvedbane/">
-    <img src="cards/02-link-2.svg" width="49%" alt="LinkedIn">
+    <img src="cards/02-link-3.svg" width="32.5%" alt="LinkedIn">
   </a>
 </p>
-
 <p align="center">
   <img src="cards/03-activity.svg" width="100%" alt="Contribution Activity">
 </p>
