@@ -1,4 +1,8 @@
 <p align="center">
+  <img src="cards/01-hero.svg" width="100%" alt="Rugved Bane">
+</p>
+
+<p align="center">
   <a href="https://www.kaggle.com/rugvedbane">
     <img src="cards/02-link-2.svg" width="32.5%" alt="Kaggle">
   </a>
@@ -6,6 +10,7 @@
     <img src="cards/02-link-3.svg" width="32.5%" alt="LinkedIn">
   </a>
 </p>
+
 <p align="center">
   <img src="cards/03-activity.svg" width="100%" alt="Contribution Activity">
 </p>
@@ -20,14 +25,6 @@
 
 <p align="center">
   <img src="cards/04-project-3.svg" width="100%" alt="UFC Fight Predictor">
-</p>
-
-<p align="center">
-  <img src="cards/04-project-4.svg" width="100%" alt="Student Health Risk Competition">
-</p>
-
-<p align="center">
-  <img src="cards/04-project-5.svg" width="100%" alt="Netflix Data Analysis">
 </p>
 
 <p align="center">
