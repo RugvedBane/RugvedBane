@@ -4,10 +4,10 @@
 
 <p align="center">
   <a href="https://www.kaggle.com/rugvedbane">
-    <img src="cards/02-link-2.svg" width="32.5%" alt="Kaggle">
+    <img src="cards/02-link-2.svg" width="49%" alt="Kaggle">
   </a>
   <a href="https://www.linkedin.com/in/rugvedbane/">
-    <img src="cards/02-link-3.svg" width="32.5%" alt="LinkedIn">
+    <img src="cards/02-link-3.svg" width="49%" alt="LinkedIn">
   </a>
 </p>
 
