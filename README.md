@@ -1,36 +1,56 @@
-<p align="center">
-  <img src="cards/01-hero.svg" width="100%" alt="Rugved Bane">
-</p>
+<table width="100%" cellpadding="0" cellspacing="0" border="0">
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/01-hero.svg" width="100%" alt="Rugved Bane">
+    </td>
+  </tr>
 
-<p align="center">
-  <a href="https://www.kaggle.com/rugvedbane">
-    <img src="cards/02-link-2.svg" width="32.5%" alt="Kaggle">
-  </a>
-  <a href="https://www.linkedin.com/in/rugvedbane/">
-    <img src="cards/02-link-3.svg" width="32.5%" alt="LinkedIn">
-  </a>
-</p>
+  <tr>
+    <td width="50%" align="right">
+      <a href="https://www.kaggle.com/rugvedbane">
+        <img src="cards/02-link-2.svg" width="280" alt="Kaggle">
+      </a>
+    </td>
+    <td width="50%" align="left">
+      <a href="https://www.linkedin.com/in/rugvedbane/">
+        <img src="cards/02-link-3.svg" width="280" alt="LinkedIn">
+      </a>
+    </td>
+  </tr>
 
-<p align="center">
-  <img src="cards/03-activity.svg" width="100%" alt="Contribution Activity">
-</p>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/03-activity.svg" width="100%" alt="Contribution Activity">
+    </td>
+  </tr>
 
-<p align="center">
-  <img src="cards/04-project-1.svg" width="100%" alt="Kwest">
-</p>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/04-project-1.svg" width="100%" alt="Kwest">
+    </td>
+  </tr>
 
-<p align="center">
-  <img src="cards/04-project-2.svg" width="100%" alt="Deepfake Audio Detector">
-</p>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/04-project-2.svg" width="100%" alt="Deepfake Audio Detector">
+    </td>
+  </tr>
 
-<p align="center">
-  <img src="cards/04-project-3.svg" width="100%" alt="UFC Fight Predictor">
-</p>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/04-project-3.svg" width="100%" alt="UFC Fight Predictor">
+    </td>
+  </tr>
 
-<p align="center">
-  <img src="cards/09-open-source.svg" width="100%" alt="Open Source Contributions">
-</p>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/09-open-source.svg" width="100%" alt="Open Source Contributions">
+    </td>
+  </tr>
 
-<p align="center">
-  <img src="cards/10-contributions.svg" width="100%" alt="GitHub Contribution Graph">
-</p>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="cards/10-contributions.svg" width="100%" alt="GitHub Contribution Graph">
+    </td>
+  </tr>
+</table>
