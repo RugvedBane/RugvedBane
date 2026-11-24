@@ -580,26 +580,30 @@ def count_up_smil(target, begin):
     return "".join(frames)
 
 
+
 def link_tiles(fonts):
+    """Generate two centered profile link cards: Kaggle and LinkedIn."""
+
     links = [
         (
-            "GITHUB",
-            "Projects & open source",
-            f"https://github.com/{USERNAME}"
-        ),
-        (
+            "02-link-2.svg",
             "KAGGLE",
             "Competitions & notebooks",
             "https://www.kaggle.com/rugvedbane"
         ),
         (
+            "02-link-3.svg",
             "LINKEDIN",
             "Professional profile",
             "https://www.linkedin.com/in/rugvedbane/"
         )
     ]
 
-    for i, (title, subtitle, url) in enumerate(links, 1):
+    old_card = OUT / "02-link-1.svg"
+    if old_card.exists():
+        old_card.unlink()
+
+    for i, (filename, title, subtitle, url) in enumerate(links, 1):
         delay = 0.15 + i * 0.16
         number = f"{i:02d}"
 
@@ -691,7 +695,7 @@ def link_tiles(fonts):
         """
 
         save_card(
-            f"02-link-{i}.svg",
+            filename,
             body,
             280,
             130,

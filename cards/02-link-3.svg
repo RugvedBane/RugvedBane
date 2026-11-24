@@ -20,17 +20,17 @@
 
             
         .card {
-            animation: enter .85s ease-out 0.63s both;
+            animation: enter .85s ease-out 0.47s both;
         }
 
         .glow {
-            animation: glow 3.5s ease-in-out 0.63s infinite alternate;
+            animation: glow 3.5s ease-in-out 0.47s infinite alternate;
         }
 
         .bar {
             transform-box: fill-box;
             transform-origin: bottom;
-            animation: grow .9s ease-out 0.8300000000000001s both;
+            animation: grow .9s ease-out 0.6699999999999999s both;
         }
 
         .best-value {
@@ -38,7 +38,7 @@
             transform-box: fill-box;
             transform-origin: center;
             animation: pop .45s cubic-bezier(.2, 1.5, .4, 1)
-                       1.73s forwards;
+                       1.57s forwards;
         }
 
         .cell {
@@ -191,14 +191,14 @@
                 attributeName="opacity"
                 values=".3;1;.3"
                 dur="2.8s"
-                begin="0.63s"
+                begin="0.47s"
                 repeatCount="indefinite"
             />
         </circle>
         
     
         <g class="tile-card"
-           style="animation-delay:0.63s">
+           style="animation-delay:0.47s">
 
             <rect x="1" y="1"
                   width="278" height="128"
@@ -207,7 +207,7 @@
 
             <text x="20" y="28" fill="#2F6B4F"
                   font-size="9" class="mono">
-                03 / PROFILE
+                02 / PROFILE
             </text>
 
             <text x="20" y="63" fill="#173D32"
@@ -229,7 +229,7 @@
                 ↗
             </text>
 
-            <text x="235" y="48" text-anchor="end" fill="#2F6B4F" font-size="25" class="mono">03<set attributeName="textContent" to="00" begin="1.280s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.325s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.370s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.415s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.460s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.505s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.550s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.595s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.640s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.685s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.730s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.775s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.820s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.865s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.910s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="03" begin="1.955s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="03" begin="2.000s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="03" begin="2.045s" dur="0.045s" fill="freeze"/></text>
+            <text x="235" y="48" text-anchor="end" fill="#2F6B4F" font-size="25" class="mono">02<set attributeName="textContent" to="00" begin="1.120s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.165s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.210s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="00" begin="1.255s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.300s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.345s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.390s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.435s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.480s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.525s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.570s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.615s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="01" begin="1.660s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.705s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.750s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.795s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.840s" dur="0.045s" fill="freeze"/><set attributeName="textContent" to="02" begin="1.885s" dur="0.045s" fill="freeze"/></text>
             
             <circle class="tile-ring"
                     cx="250" cy="108" r="8"
@@ -241,11 +241,11 @@
                     fill="#2F6B4F"/>
             
             
-            <clipPath id="tile-clip-3">
+            <clipPath id="tile-clip-2">
                 <rect x="1" y="1" width="278" height="128" rx="16"/>
             </clipPath>
 
-            <g clip-path="url(#tile-clip-3)">
+            <g clip-path="url(#tile-clip-2)">
                 <rect class="tile-shine"
                       x="-340" y="0"
                       width="100" height="130"
