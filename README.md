@@ -1,4 +1,3 @@
-
 <p align="center">
   <img src="cards/01-hero.svg" width="100%" alt="Rugved Bane">
 </p>
@@ -13,19 +12,8 @@
 </p>
 
 <p align="center">
-  <img src="cards/03-activity.svg" width="100%" alt="GitHub contribution activity">
+  <img src="cards/03-activity.svg" width="100%" alt="Contribution Activity">
 </p>
-
----
-
-## What I Work On
-
-- **Machine Learning:** Predictive modelling, feature engineering, model evaluation and optimization.
-- **Deep Learning:** Neural networks, transfer learning and computer vision.
-- **GenAI Engineering:** LLM-powered workflows, tool calling, agentic systems and application development.
-- **Open Source:** Code contributions, bug fixes and tests across Python and machine learning libraries.
-
-## Featured Projects
 
 <p align="center">
   <a href="https://github.com/RugvedBane/Kwest">
@@ -45,31 +33,12 @@
   </a>
 </p>
 
-## Open Source
-
 <p align="center">
-  <a href="https://github.com/pulls?q=is%3Apr+author%3ARugvedBane">
-    <img src="cards/09-open-source.svg" width="100%" alt="Open-source contributions">
+  <a href="https://github.com/search?q=author%3ARugvedBane+is%3Apr+is%3Amerged&type=pullrequests">
+    <img src="cards/09-open-source.svg" width="100%" alt="Open Source Contributions">
   </a>
 </p>
 
-Contributing code fixes and improvements to projects including [scikit-learn](https://github.com/scikit-learn/scikit-learn), [Feature-engine](https://github.com/feature-engine/feature_engine) and [Recusal](https://github.com/philpaz/recusal).
-
-[View all my pull requests](https://github.com/pulls?q=is%3Apr+author%3ARugvedBane).
-
-## Technical Stack
-
-| Area | Technologies |
-|---|---|
-| Languages | Python, SQL |
-| Data & Analysis | NumPy, Pandas, Matplotlib |
-| Machine Learning | Scikit-learn, XGBoost, LightGBM, Optuna |
-| Deep Learning | PyTorch, TensorFlow, Keras |
-| Computer Vision | OpenCV, YOLO |
-| GenAI | LangChain, LLM APIs, Tool Calling |
-| Backend & Apps | FastAPI, Streamlit |
-| Tools | Git, GitHub, Jupyter, VS Code |
-
 <p align="center">
-  <sub>I build Machine Learning and GenAI systems.</sub>
+  <img src="cards/10-contributions.svg" width="100%" alt="GitHub Contribution Graph">
 </p>
