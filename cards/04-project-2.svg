@@ -2,8 +2,8 @@
     <svg xmlns="http://www.w3.org/2000/svg"
          xmlns:xlink="http://www.w3.org/1999/xlink"
          width="860"
-         height="200"
-         viewBox="0 0 860 200">
+         height="224"
+         viewBox="0 0 860 224">
 
         <title>Rugved Bane - GitHub Profile</title>
 
@@ -58,14 +58,8 @@
         }
 
         @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes glow {
@@ -84,18 +78,9 @@
         }
 
         @keyframes pop {
-            0% {
-                opacity: 0;
-                transform: scale(.4) translateY(8px);
-            }
-            75% {
-                opacity: 1;
-                transform: scale(1.2) translateY(-3px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
+            0% { opacity: 0; transform: scale(.4) translateY(8px); }
+            75% { opacity: 1; transform: scale(1.2) translateY(-3px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
         }
 
         @keyframes tile-enter {
@@ -107,9 +92,7 @@
                 opacity: 1;
                 transform: translateY(-9px) rotate(-2deg);
             }
-            82% {
-                transform: translateY(4px) rotate(1deg);
-            }
+            82% { transform: translateY(4px) rotate(1deg); }
             100% {
                 opacity: 1;
                 transform: translateY(0) rotate(0);
@@ -117,12 +100,8 @@
         }
 
         @keyframes shine {
-            0%, 65% {
-                transform: translateX(-340px);
-            }
-            85%, 100% {
-                transform: translateX(340px);
-            }
+            0%, 65% { transform: translateX(-340px); }
+            85%, 100% { transform: translateX(340px); }
         }
         
             
@@ -149,14 +128,15 @@
 
         <rect x="1" y="1"
               width="858"
-              height="198"
+              height="222"
               rx="18"
               fill="none"
               stroke="#CCD5C9"/>
 
         <g class="card">
             
-        <circle cx="832" cy="26" r="3" fill="#2F6B4F">
+        <circle cx="836" cy="22" r="4"
+                fill="#2F6B4F">
             <animate
                 attributeName="opacity"
                 values=".3;1;.3"
@@ -168,35 +148,134 @@
         
     
         <a href="https://github.com/RugvedBane/deepfake-audio-detector">
-            <rect x="1" y="1" width="858" height="198"
+            <rect x="1" y="1" width="858" height="222"
                   rx="18" fill="transparent"/>
 
-            <text x="24" y="30" fill="#2F6B4F"
-                  font-size="9" class="mono">
+            <text x="24" y="29" fill="#2F6B4F"
+                  font-size="9" class="mono" letter-spacing=".5">
                 FEATURED PROJECT / 02
             </text>
 
-            <text x="24" y="72" fill="#173D32"
+            <text x="24" y="68" fill="#173D32"
                   font-size="25" font-weight="750">
                 Deepfake Audio Detector
             </text>
 
-            <text x="25" y="98" fill="#2F6B4F" font-size="12">
-                Synthetic audio detection
+            <text x="25" y="92" fill="#2F6B4F" font-size="12"
+                  font-weight="600">
+                End-to-end synthetic audio detection
             </text>
 
-            <text x="25" y="128" fill="#587064" font-size="11">
-                Machine learning project for detecting deepfake audio.
+            <text x="25" y="119" fill="#587064" font-size="10.5"><tspan x="25" dy="0">EfficientNet-B0 on ASVspoof 2019 LA, with Grad-CAM, LLM explanations and a deployed</tspan><tspan x="25" dy="15">FastAPI service.</tspan></text>
+
+            <line x1="24" y1="150" x2="616" y2="150"
+                  stroke="#CCD5C9" stroke-width="1"/>
+
+            <text x="25" y="171" fill="#587064"
+                  font-size="8.2" class="mono" letter-spacing=".45">
+                STACK
             </text>
 
-            <text x="25" y="163" fill="#2F6B4F"
-                  font-size="10" class="mono">
-                SOURCE REPOSITORY ↗
+            
+        <rect x="83" y="157"
+              width="54" height="21"
+              rx="10.5" fill="#EAE6D9" stroke="#CCD5C9"/>
+        <text x="110.0"
+              y="171.1"
+              text-anchor="middle" fill="#587064"
+              font-size="8.2" font-weight="600">
+            PyTorch
+        </text>
+        
+        <rect x="144" y="157"
+              width="95" height="21"
+              rx="10.5" fill="#EAE6D9" stroke="#CCD5C9"/>
+        <text x="191.5"
+              y="171.1"
+              text-anchor="middle" fill="#587064"
+              font-size="8.2" font-weight="600">
+            EfficientNet-B0
+        </text>
+        
+        <rect x="246" y="157"
+              width="54" height="21"
+              rx="10.5" fill="#EAE6D9" stroke="#CCD5C9"/>
+        <text x="273.0"
+              y="171.1"
+              text-anchor="middle" fill="#587064"
+              font-size="8.2" font-weight="600">
+            FastAPI
+        </text>
+        
+        <rect x="307" y="157"
+              width="64" height="21"
+              rx="10.5" fill="#EAE6D9" stroke="#CCD5C9"/>
+        <text x="339.0"
+              y="171.1"
+              text-anchor="middle" fill="#587064"
+              font-size="8.2" font-weight="600">
+            Streamlit
+        </text>
+        
+        <rect x="378" y="157"
+              width="59" height="21"
+              rx="10.5" fill="#EAE6D9" stroke="#CCD5C9"/>
+        <text x="407.5"
+              y="171.1"
+              text-anchor="middle" fill="#587064"
+              font-size="8.2" font-weight="600">
+            Grad-CAM
+        </text>
+        
+
+            <text x="25" y="207" fill="#2F6B4F"
+                  font-size="9.5" class="mono" letter-spacing=".2">
+                VIEW REPOSITORY  >
             </text>
 
-            <text x="690" y="30" fill="#587064"
-                  font-size="9" class="mono">
-                MACHINE LEARNING
+            <rect x="646" y="27" width="190" height="174"
+                  rx="14" fill="#EAE6D9" stroke="#CCD5C9"/>
+
+            <text x="663" y="49" fill="#587064"
+                  font-size="8" class="mono" letter-spacing=".55">
+                PROJECT PROOF
+            </text>
+
+            <text x="663" y="88" fill="#173D32"
+                  font-size="25" font-weight="760">
+                8.23%
+            </text>
+
+            <text x="664" y="105" fill="#587064"
+                  font-size="7.7" class="mono" letter-spacing=".1">
+                EQUAL ERROR RATE · TEST SET
+            </text>
+
+            <line x1="663" y1="117" x2="819" y2="117"
+                  stroke="#CCD5C9" stroke-width="1"/>
+
+            <text x="663" y="148" fill="#2F6B4F"
+                  font-size="18" font-weight="730">
+                263s → 6s
+            </text>
+
+            <text x="664" y="164" fill="#587064"
+                  font-size="7.3" class="mono">
+                INFERENCE LATENCY · RAILWAY
+            </text>
+
+            <text x="663" y="186" fill="#587064"
+                  font-size="7.8">
+                Evaluated on 71,237 test samples
+            </text>
+
+            <line x1="631" y1="43" x2="631" y2="193"
+                  stroke="#CCD5C9" stroke-width="1"
+                  opacity=".9"/>
+
+            <text x="615" y="29" text-anchor="end" fill="#587064"
+                  font-size="7.2" class="mono">
+                AUDIO · DEEP LEARNING
             </text>
         </a>
         </g></svg>

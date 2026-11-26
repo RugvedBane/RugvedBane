@@ -58,14 +58,8 @@
         }
 
         @keyframes enter {
-            from {
-                opacity: 0;
-                transform: translateY(18px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+            from { opacity: 0; transform: translateY(18px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         @keyframes glow {
@@ -84,18 +78,9 @@
         }
 
         @keyframes pop {
-            0% {
-                opacity: 0;
-                transform: scale(.4) translateY(8px);
-            }
-            75% {
-                opacity: 1;
-                transform: scale(1.2) translateY(-3px);
-            }
-            100% {
-                opacity: 1;
-                transform: scale(1) translateY(0);
-            }
+            0% { opacity: 0; transform: scale(.4) translateY(8px); }
+            75% { opacity: 1; transform: scale(1.2) translateY(-3px); }
+            100% { opacity: 1; transform: scale(1) translateY(0); }
         }
 
         @keyframes tile-enter {
@@ -107,9 +92,7 @@
                 opacity: 1;
                 transform: translateY(-9px) rotate(-2deg);
             }
-            82% {
-                transform: translateY(4px) rotate(1deg);
-            }
+            82% { transform: translateY(4px) rotate(1deg); }
             100% {
                 opacity: 1;
                 transform: translateY(0) rotate(0);
@@ -117,12 +100,8 @@
         }
 
         @keyframes shine {
-            0%, 65% {
-                transform: translateX(-340px);
-            }
-            85%, 100% {
-                transform: translateX(340px);
-            }
+            0%, 65% { transform: translateX(-340px); }
+            85%, 100% { transform: translateX(340px); }
         }
         
             
@@ -157,13 +136,9 @@
         <g class="card">
             
     
-        <g class="tile-card"
-           style="animation-delay:0.31s">
-
-            <rect x="1" y="1"
-                  width="278" height="128"
-                  rx="16" fill="#EAE6D9"
-                  stroke="#CCD5C9"/>
+        <g class="tile-card" style="animation-delay:0.31s">
+            <rect x="1" y="1" width="278" height="128"
+                  rx="16" fill="#EAE6D9" stroke="#CCD5C9"/>
 
             <text x="20" y="28" fill="#2F6B4F"
                   font-size="9" class="mono">
@@ -175,16 +150,18 @@
                 LINKEDIN
             </text>
 
-            <text x="20" y="87" fill="#587064" font-size="10">
-                Professional profile
-            </text>
+            <line x1="20" y1="74" x2="48" y2="74"
+                  stroke="#2F6B4F" stroke-width="1.4"
+                  stroke-linecap="round" opacity=".72"/>
 
-            <text x="20" y="112" fill="#2F6B4F" font-size="10"
+            <text x="20" y="87" fill="#587064" font-size="10"><tspan x="20" dy="0">AI/ML work and professional</tspan><tspan x="20" dy="12">updates</tspan></text>
+
+            <text x="20" y="113" fill="#2F6B4F" font-size="10"
                   class="mono">
-                OPEN
+                VIEW PROFILE
             </text>
 
-            <text x="55" y="112" fill="#2F6B4F"
+            <text x="104" y="113" fill="#2F6B4F"
                   font-size="12">
                 ↗
             </text>
