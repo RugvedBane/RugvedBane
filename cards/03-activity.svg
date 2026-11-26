@@ -151,13 +151,13 @@
     </text>
     <text x="815" y="51" text-anchor="end" fill="#2F6B4F"
           font-size="12" font-weight="700">
-        Nov · 85
+        Nov · 89
     </text>
 
     
         <text x="28" y="91" fill="#2F6B4F"
               font-size="25" font-weight="740">
-            192
+            196
         </text>
         <text x="29" y="108" fill="#587064" font-size="8.5"
               letter-spacing=".35">
@@ -341,13 +341,13 @@
         </text>
         
         <rect class="bar"
-              x="500" y="200"
-              width="29" height="13"
+              x="500" y="201"
+              width="29" height="12"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.135s"/>
 
         <text
-              x="514" y="191"
+              x="514" y="192"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -361,13 +361,13 @@
         </text>
         
         <rect class="bar"
-              x="565" y="189"
-              width="29" height="24"
+              x="565" y="190"
+              width="29" height="23"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.190s"/>
 
         <text
-              x="579" y="180"
+              x="579" y="181"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -381,13 +381,13 @@
         </text>
         
         <rect class="bar"
-              x="630" y="189"
-              width="29" height="24"
+              x="630" y="190"
+              width="29" height="23"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.245s"/>
 
         <text
-              x="644" y="180"
+              x="644" y="181"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -401,13 +401,13 @@
         </text>
         
         <rect class="bar"
-              x="695" y="200"
-              width="29" height="13"
+              x="695" y="201"
+              width="29" height="12"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.300s"/>
 
         <text
-              x="709" y="191"
+              x="709" y="192"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -431,7 +431,7 @@
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
-            85
+            89
         </text>
 
         <text x="774" y="238"
