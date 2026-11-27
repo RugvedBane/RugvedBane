@@ -151,13 +151,13 @@
     </text>
     <text x="815" y="51" text-anchor="end" fill="#2F6B4F"
           font-size="12" font-weight="700">
-        Nov · 89
+        Nov · 90
     </text>
 
     
         <text x="28" y="91" fill="#2F6B4F"
               font-size="25" font-weight="740">
-            196
+            197
         </text>
         <text x="29" y="108" fill="#587064" font-size="8.5"
               letter-spacing=".35">
@@ -166,7 +166,7 @@
         
         <text x="225" y="91" fill="#173D32"
               font-size="25" font-weight="740">
-            3
+            4
         </text>
         <text x="226" y="108" fill="#587064" font-size="8.5"
               letter-spacing=".35">
@@ -175,7 +175,7 @@
         
         <text x="405" y="91" fill="#173D32"
               font-size="25" font-weight="740">
-            55
+            56
         </text>
         <text x="406" y="108" fill="#587064" font-size="8.5"
               letter-spacing=".35">
@@ -361,13 +361,13 @@
         </text>
         
         <rect class="bar"
-              x="565" y="190"
-              width="29" height="23"
+              x="565" y="191"
+              width="29" height="22"
               rx="4" fill="#2F6B4F"
               style="animation-delay:1.190s"/>
 
         <text
-              x="579" y="181"
+              x="579" y="182"
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
@@ -431,7 +431,7 @@
               text-anchor="middle"
               fill="#2F6B4F" font-size="10"
               font-weight="700">
-            89
+            90
         </text>
 
         <text x="774" y="238"
